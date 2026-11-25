@@ -1,0 +1,49 @@
+On the night of June 18th, 2024, hackers knocked out the software behind about 15,000 car dealerships. Six months later, the FTC and Illinois reached a $20 million settlement with a Chicago-area dealer group, the FTC's largest ever with a car dealer. In September 2025, Tricolor, a Dallas used-car dealer and lender, collapsed into Chapter 7. And on October 1st, 2026, California gave used-car buyers three days to cancel.
+
+Yet the average new car now sells for a record $51,109. And the dealer's profit on that car has collapsed.
+
+So what really happened? This video follows the money: the markup years, why the finance office and the service bay now earn more than the car itself, what one extra point on your loan costs, and who is paying the bill now.
+
+Chapters
+0:00 Car dealerships, in the news
+1:18 The markup years
+2:34 How a dealer really makes money
+3:40 The price of the money
+4:58 Fall #1: the markup is gone
+6:11 Fall #2: the regulators
+8:11 Fall #3: the borrowers
+9:48 The other side
+10:42 It happened before
+11:20 So... did they get what they deserve?
+
+Sources
+Cox Automotive / Kelley Blue Book, October 2026 average transaction price report: https://www.coxautoinc.com/insights/oct-2026-atp-report/
+Cox Automotive, October 2026 new-vehicle inventory: https://www.coxautoinc.com/insights/october-2026-new-vehicle-inventory/
+AutoNation Form 10-Q, quarter ended Sept 30, 2026: https://www.sec.gov/Archives/edgar/data/0000350698/000162828026068579/an-20260930.htm
+AutoNation Form 10-K, fiscal 2022: https://www.sec.gov/Archives/edgar/data/350698/000035069823000026/an-20221231.htm
+Edmunds, Jan 2022 above-sticker data (Feb 15, 2022); NADA via Kelley Blue Book, 2021 dealer profits (Nov 12, 2021)
+Edmunds, Q3 2026 new-car financing: https://www.edmunds.com/press/new-car-financing-records-pile-up-in-q3-as-buyers-borrow-more-and-stretch-loans-longer-according-to-edmunds.html
+CFPB, auto finance fact sheet (dealer markup): https://files.consumerfinance.gov/f/201303_cfpb_march_Auto-Finance-Factsheet.pdf
+FTC, CARS Rule announced (Dec 12, 2023): https://www.ftc.gov/news-events/news/press-releases/2023/12/ftc-announces-cars-rule-fight-scams-vehicle-shopping
+Fifth Circuit, NADA v. FTC, No. 24-60013 (Jan 27, 2025): https://www.ca5.uscourts.gov/Opinions/pub/24/24-60013-CV0.pdf
+FTC and Illinois v. Leader Automotive Group (Dec 19, 2024): https://www.ftc.gov/news-events/news/press-releases/2024/12/ftc-illinois-take-action-against-leader-automotive-group-overcharging-deceiving-consumers-through
+FTC warning letters to 97 dealership groups (Mar 13, 2026): https://www.ftc.gov/news-events/news/press-releases/2026/03/ftc-warns-97-auto-dealership-groups-about-deceptive-pricing
+FTC and Connecticut, Manchester City Nissan (Aug 19, 2026): https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-connecticut-secure-4-million-settlement-manchester-city-nissan-over-deceptive-fees-allegations
+FTC, Greenway Auto Group (Oct 8, 2026): https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-secures-settlement-auto-dealership-group-price-transparency-win-consumers
+FTC, Stream Auto Outlet (Nov 9, 2026): https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-secures-settlement-stream-auto-outlet-advancing-price-transparency-auto-buying-consumers
+FTC order dismissing Asbury complaint (Oct 5, 2026): https://www.ftc.gov/system/files/ftc_gov/pdf/d9436commnorderdismisscomplaint.pdf
+California DMV, SB 766 (CARS Act): https://www.dmv.ca.gov/portal/?p=340247
+U.S. Attorney SDNY, Tricolor executives charged (Dec 17, 2025): https://www.justice.gov/usao-sdny/pr/ceo-cfo-coo-charged-connection-billion-dollar-collapse-tricolor-auto
+Fitch Ratings via Bloomberg Government, subprime auto delinquencies, Oct 2025
+Cox Automotive via Carscoops, repossessions in 2024 (Mar 2025)
+Talk Business and Politics, America's Car-Mart results, Sept 9, 2026
+Congressional Research Service R40712 (2009 dealer closings): https://www.everycrsreport.com/reports/R40712.html
+
+Music: "Surreptitious" and "Syntheticity" by Tanner Helland, licensed under CC BY 4.0 - https://github.com/tannerhelland/free-music
+Sound effects: SFX Kit by Wyzowl (CC0) - https://github.com/wyzowl/sfx-kit
+
+FTC cases and the Tricolor charges described in this video are allegations, not court findings; the defendants are presumed innocent. The loan payment and the one-point markup example (about $22 a month, about $1,500 over the loan) are our own estimates, labeled as such on screen. Per-car figures are AutoNation's, not industry averages. Nothing here is financial, tax or legal advice.
+
+Would you finance through the dealer after seeing the math? Tell us in the comments.
+
+#cardealership #businessdocumentary #moneyencode

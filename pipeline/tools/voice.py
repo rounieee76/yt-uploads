@@ -26,6 +26,7 @@ def year(m):
     return num2words(y, to="year")
 
 def normalize(t):
+    t = t.replace("CDK", "C D K").replace("CARS Rule", "Cars Rule").replace("CEO", "C E O").replace("GM ", "G M ").replace("AutoNation", "Auto Nation").replace("pretax", "pre-tax")
     t = t.replace("U.S.", "U S").replace("FTC", "F T C").replace("IPO", "I P O")
     t = t.replace("SUVs", "S U Vs").replace("Take 5", "Take Five").replace("CoStar", "Co-Star")
     t = t.replace("…", ".").replace("—", ", ")
