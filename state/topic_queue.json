@@ -1,0 +1,183 @@
+{
+ "note": "Work top-down through status=todo. Outlier-found topics are added with origin=outlier and status=candidate (see RUNBOOK step 1).",
+ "queue": [
+  {
+   "slate_no": "05",
+   "working_title": "A $5 Basket at Dollar General: How Much Does the Store Keep?",
+   "twist": "Tiny stores, one or two staff, cheap rural leases; the money is in density, not any single store.",
+   "demand": "1.83M median (strongest in study)",
+   "sources_to_pull": "Dollar General 10-K; earnings releases",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "03",
+   "working_title": "$1.50 Costco Hot Dog: How Costco Makes Money Losing Money",
+   "twist": "Membership fees were about half of operating income in fiscal 2025; net income $8.1B.",
+   "demand": "1M+ top video",
+   "sources_to_pull": "Costco 10-K and quarterly releases",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "09",
+   "working_title": "$150/Month Storage Unit: Why Self Storage Is Everywhere",
+   "twist": "Almost no staff; rent rises on tenants who never leave. It's really a land play.",
+   "demand": "248K median",
+   "sources_to_pull": "Public Storage and Extra Space 10-Ks",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "10",
+   "working_title": "A $12 Burrito From a Food Truck: Can 100 a Day Make $100K a Year?",
+   "twist": "Commissary, permits and event fees eat the street margin; catering is where the profit is.",
+   "demand": "228K median",
+   "sources_to_pull": "City permit fee schedules; owner disclosures",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "07",
+   "working_title": "$4.50 a Load: How Much Does a Laundromat Owner Keep?",
+   "twist": "The lease decides everything. The real margin is wash-and-fold.",
+   "demand": "133K median",
+   "sources_to_pull": "Coin Laundry Association; state utility rates",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "04",
+   "working_title": "A $35 DoorDash Order: Where Does Every Dollar Go?",
+   "twist": "DoorDash keeps about 13.5% of order value. Restaurant, driver and app each think the others are getting rich.",
+   "demand": "112K median",
+   "sources_to_pull": "DoorDash 10-K; Gridwise driver-pay data",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "02",
+   "working_title": "$3.50 a Gallon: How Much Does the Gas Station Keep?",
+   "twist": "Fuel is 65% of sales but only 38.8% of gross profit; you sell gas to sell coffee and snacks.",
+   "demand": "Gap: universal topic, few US videos (7K median)",
+   "sources_to_pull": "NACS State of the Industry; EIA gasoline data",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "08",
+   "working_title": "A $3,000 Truckload: How Much Does the Owner-Operator Keep?",
+   "twist": "Deadhead miles and the broker's cut decide whether the trip pays.",
+   "demand": "66K median",
+   "sources_to_pull": "ATRI Operational Costs of Trucking; DAT spot rates",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "12",
+   "working_title": "A $7 Latte: How Much Does a Coffee Shop Owner Keep?",
+   "twist": "Rent and labor vs. a $0.40 cup of coffee.",
+   "demand": "234K median",
+   "sources_to_pull": "Owner disclosures; Starbucks 10-K for contrast",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "13",
+   "working_title": "$2.50 Soda From a Vending Machine: Is a Vending Route Worth It?",
+   "twist": "The route is the job.",
+   "demand": "138K median",
+   "sources_to_pull": "NAMA data; operator disclosures",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "14",
+   "working_title": "$15 Ticket, $9 Popcorn: Movie Theaters Are Snack Bars With Screens",
+   "twist": "Concessions carry the margin; studios take most of the ticket.",
+   "demand": "n/a",
+   "sources_to_pull": "Cinemark and AMC 10-Ks",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "16",
+   "working_title": "$60/Hour Golf Simulator Bay: Who Pays for the Empty Afternoons?",
+   "twist": "Empty weekday hours decide everything.",
+   "demand": "195K (Topgolf)",
+   "sources_to_pull": "Topgolf Callaway filings; operator data",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "18",
+   "working_title": "$1,500/Month Daycare Spot: Why It Costs So Much and Owners Still Struggle",
+   "twist": "State staff-to-child ratios set the ceiling.",
+   "demand": "n/a",
+   "sources_to_pull": "State ratio rules; BLS wages; Child Care Aware",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "20",
+   "working_title": "$250 Bounce House Rental: Buy It Once, Rent It 100 Times?",
+   "twist": "Insurance and weekend-only demand.",
+   "demand": "n/a",
+   "sources_to_pull": "Operator disclosures; insurance quotes",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "19",
+   "working_title": "Gas vs Hybrid vs EV: At How Many Miles a Day Does an EV Pay Off?",
+   "twist": "EIA gas and electricity prices.",
+   "demand": "n/a",
+   "sources_to_pull": "EIA; AAA cost-to-own",
+   "origin": "playbook",
+   "status": "todo",
+   "video_id": null
+  },
+  {
+   "slate_no": "01",
+   "working_title": "$20/Month Unlimited Car Wash",
+   "origin": "playbook",
+   "status": "done",
+   "video_id": "DjbxaXK8hcw"
+  },
+  {
+   "slate_no": "06",
+   "working_title": "5 Boring Businesses",
+   "origin": "playbook",
+   "status": "done",
+   "video_id": "_DMac623hvI"
+  },
+  {
+   "slate_no": "11",
+   "working_title": "Planet Fitness",
+   "origin": "playbook",
+   "status": "done",
+   "video_id": "XQGpftHCcCg"
+  },
+  {
+   "slate_no": "15",
+   "working_title": "Car dealer profit",
+   "origin": "playbook",
+   "status": "done",
+   "video_id": "syucMyOk2dE"
+  }
+ ]
+}

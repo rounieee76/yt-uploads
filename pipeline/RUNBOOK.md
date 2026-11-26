@@ -16,24 +16,49 @@ the quality bar, do not upload, and tell the owner why (step 16).
    `youtube_upload_video` (`execute_zapier_write_action`). The workspace itself cannot reach YouTube, Wikimedia, SEC or
    news sites; use WebSearch/WebFetch for research and Zapier for YouTube.
 
-## 1. Pick today's topic (data first)
-- **Our channel:** list uploads (`playlistItems`, playlist `UU_4MlW0Gh4XhvooLjLZCigA`), then `youtubeAnalytics.googleapis.com/v2/reports`
-  with `ids=channel==MINE`, `dimensions=video`, metrics `views,averageViewDuration,averageViewPercentage,subscribersGained`
-  since the channel start; and `insightTrafficSourceType` for the top video. Rank formats/categories by views and
-  average view %. As of Nov 24, 2026 the only breakout was car washes (6.1K views, 91% from Browse); Planet Fitness
-  and the "5 boring businesses" list flopped.
-- **Other channels:** YouTube Data API `search` (via Zapier GET) ordered by `viewCount`, `publishedAfter` = 45 days ago,
-  `regionCode=US`, queries such as `"Getting What They Deserve"`, `"what happened to"` + business, and the playbook
-  topics; then `videos?part=statistics,snippet,contentDetails` for counts. Reference channels: Mr. Company
-  (`UCOwywQzlbTTWdZA0Oxwhf9w`), Bagholder Association, Logically Answered, Hustler's Math, Food Meter, MERCER.
-- **Choose:** ~70% of days exploit what works (same category or format as our best performer, e.g. car-related and
-  everyday-roadside US businesses: car washes, oil change chains, gas stations, car dealerships, tire shops, parking);
-  ~30% test a topic the genre has already proven (another channel's video on it > 100K views in the last year) in the
-  same comeuppance format (fast food chains, dollar stores, subscriptions, big consumer brands with a public fall).
-- **Never repeat** a company/subject from `state/videos.json` in the last 30 days. US subject, US audience only.
-- A comeuppance title needs a **real, dated, verifiable fall** (bankruptcy, closures, traffic/sales drop, lawsuit,
-  regulator action, stock collapse, price backlash). No verified fall → use a price or curiosity title and the playbook spine.
-- Write the decision and the numbers behind it to `research/topic.md`.
+## 1. Pick today's topic (playbook slate first, then outliers)
+The owner's instruction (Nov 26, 2026): make the top videos selected in the Storytelling Playbook PDF (section 10,
+"The US topic slate"), keep researching outlier videos that are working on YouTube, and keep making that type of
+video. It is **not** limited to car businesses; do not default to car topics.
+
+**a. Measure what we already posted (5 min).** For every video in `state/videos.json` from the last 30 days, GET
+`videos?part=statistics` and record `views_<date>` in its entry; for videos ≥ 7 days old also record
+`views_day7` once. Compare title formats (`title_format`: "price-question", "comeuppance", "curiosity") by day-7
+views; note the result in `research/topic.md`. Nov 26 snapshot: comeuppance car videos had 26–32 views after 1–2 days;
+the price title "Car Washes Want You on $29.99/Month." is still the best performer (6.2K).
+
+**b. Outlier hunt (every run, ~15 min).** Find videos that beat their own channel by a wide margin:
+1. YouTube Data API `search` (Zapier GET) with `type=video`, `order=viewCount`, `publishedAfter` = 60 days ago,
+   `regionCode=US`, `relevanceLanguage=en`, `videoDuration=medium` or `long`, for 6–8 of these queries (rotate daily):
+   "how * makes money", "why * is everywhere", "the economics of", "is * worth it", "how much does * make",
+   "Getting What They Deserve", "what happened to", "the dark side of", "business model explained", "where does the money go",
+   plus 2 queries built from the next slate topics (e.g. "dollar general", "costco hot dog", "self storage").
+2. For the top 15 results: `videos?part=statistics,snippet,contentDetails` and `channels?part=statistics`.
+3. **Outlier** = views ≥ 100K AND views ≥ 3 × the channel's subscriber count (or ≥ 3 × the channel's median of its last
+   15 uploads when you have it). Prefer ≥ 10 min, US consumer-business / money-mechanics subjects we can tell with
+   filings and public data (no true crime, no politics, no personality-led formats).
+4. Append every outlier to `state/outliers.json` as `{date_found, video_id, channel, title, views, subs, ratio,
+   published, topic, format, title_pattern}`. If its subject fits our niche and is not already in the queue or in
+   `state/videos.json` (last 90 days), add it to `state/topic_queue.json` with `origin:"outlier"`,
+   `status:"candidate"`, a working title in our style, the twist, and the evidence (video id, views, ratio).
+5. Also note **title and thumbnail patterns** that recur among outliers (write them in `research/topic.md`; if a
+   pattern holds across 3+ outliers, use it).
+
+**c. Choose today's topic.**
+- Default (2 of every 3 days): the **first `status:"todo"` item** in `state/topic_queue.json` (the playbook slate,
+  in priority order: Dollar General, Costco hot dog, self storage, food truck, laundromat, DoorDash, gas station,
+  trucking, then Tier B).
+- Every 3rd day (count the last two entries in `state/videos.json`; if neither came from an outlier): the strongest
+  outlier candidate. A very strong outlier (≥ 1M views or ratio ≥ 10, published ≤ 30 days ago) may jump the queue any day.
+- Never repeat a subject from `state/videos.json` in the last 30 days; at most 2 car-related videos per 7 days.
+- Title: the playbook title style (price + question, e.g. "A $5 Basket at Dollar General: How Much Does the Store
+  Keep?") is the default for slate topics. Use the comeuppance title ("<Brand> Is (Finally) Getting What They
+  Deserve…") only when there is a real, dated, verified fall AND it is a household brand. For outlier topics, follow the
+  outlier's proven title pattern in our own words.
+- Mark the chosen item `status:"in_progress"`; after upload set `status:"done"` and `video_id`. If the run fails, set
+  it back to `todo`.
+- Record `origin` (playbook / outlier), `title_format` and `slate_no` in the `state/videos.json` entry.
+- Write the decision, the data behind it and the outlier list to `research/topic.md`.
 
 ## 2. Research and fact-check
 WebSearch + WebFetch; prefer primary sources (SEC filings, company releases, court dockets, regulator releases).
@@ -46,7 +71,14 @@ Same structure as the example (sections → paragraphs → sentences; section `i
 Comeuppance spine (when the title is "[X] Is/Are (Finally) Getting What They Deserve…"): dated cold open (3-4 facts,
 each worse) → paradox line → promise → [sting] → glory days → how the money works (our identity segment: who pays,
 what one dollar becomes) → fall #1/#2/#3 → the other side → it happened before → verdict that answers the title →
-"Next on Money Encode: …". Rules: median sentence 10-13 words; ≤ 1 viewer question per 2 min; numbers tied to a
+"Next on Money Encode: …".
+Playbook spine (default for slate topics with a price-question title; PLAYBOOK.txt section 7): 0:00–0:40 open
+inside a specific US scene in present tense (you at the Dollar General register with a $5 basket; a price on a screen),
+no logo, no "in this video" → 0:40–1:10 one sentence that makes the ordinary strange + a quick list of what's coming
+→ sting → how it got here with one human character (founder/CEO, name card) → re-hook every 60–120 s, each reveal
+bigger → ~5:00 return to the opening scene → the math as a scene (what we searched, what is missing, an estimate in
+2–3 labelled parts with assumptions out loud, real documents) → the twist (who really wins) → payoff that answers the
+title in one number and calls back to the opening scene → "Next on Money Encode: …". Rules: median sentence 10-13 words; ≤ 1 viewer question per 2 min; numbers tied to a
 picture; ≥ 1 honest admission; US English and units; write money as words the voice reads well ("654 million dollars",
 "22 dollars and 40 cents"); avoid symbols in narration. The first section's last sentence is followed by the logo sting.
 
@@ -131,8 +163,8 @@ URLs: `https://raw.githubusercontent.com/rounieee76/yt-uploads/stage/v/video.mp4
 `git push -q origin --delete stage` (the files leave the repo).
 
 ## 14. Record state (main branch)
-Write `state/latest.json` = `{"date","video_id","title","topic","category","status":"private_awaiting_publish"}` and
-append the same object (plus views later) to `state/videos.json`. Copy `script/narration.json`, `script/sfx_cues.json`,
+Write `state/latest.json` = `{"date","video_id","title","topic","category","origin","title_format","status":"private_awaiting_publish"}` and
+append the same object to `state/videos.json`; update `state/topic_queue.json` and `state/outliers.json`. Copy `script/narration.json`, `script/sfx_cues.json`,
 `research/claims.md`, `research/topic.md`, `tools/scenes.mjs` into `pipeline/examples/<date>-<slug>/` so the next run
 can learn from it. Commit and push main.
 
