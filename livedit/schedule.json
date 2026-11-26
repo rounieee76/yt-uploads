@@ -45,6 +45,15 @@
    "status": "voicing",
    "claimed_at": "2026-11-26T18:47:07Z",
    "run": "main-session"
+  },
+  {
+   "subject": "Blackbeard",
+   "slug": "blackbeard",
+   "video_id": null,
+   "publish_at": null,
+   "status": "claimed",
+   "claimed_at": "2026-11-26T19:48:14Z",
+   "run": "B"
   }
  ]
 }
