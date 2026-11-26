@@ -40,9 +40,9 @@
     {
       "subject": "King Leonidas",
       "slug": "leonidas",
-      "video_id": null,
+      "video_id": "yiUs8QiOeww",
       "publish_at": "2026-11-28T13:00:00Z",
-      "status": "rendering",
+      "status": "scheduled",
       "claimed_at": "2026-11-26T18:47:07Z",
       "run": "main-session"
     },
