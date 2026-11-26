@@ -33,7 +33,7 @@ John Marston, Tommy Vercetti (~500 comments read). Likes in brackets = demand si
 - Ends with a question → comments explode ("Would you have talked?", "How do you think he got his mask?").
 
 ## Our queue (real people / myths / legends — nobody owns them)
-1. Genghis Khan — proven in this format (105K / 8 days for "Your Life as Genghis Khan") — MAKING 2026-11-26
+1. Genghis Khan — DONE 2026-11-26 (amLt4aU1bYo, public 2 PM ET)
 2. Al Capone — answers the GTA / Mafia / Vito / Niko requests (biggest request cluster)
 3. Jesse James — answers the Arthur Morgan / John Marston outlaw crowd
 4. Blackbeard — answers "Captain Jack Sparrow"
