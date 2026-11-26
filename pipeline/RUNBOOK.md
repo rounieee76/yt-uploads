@@ -44,6 +44,27 @@ the price title "Car Washes Want You on $29.99/Month." is still the best perform
 5. Also note **title and thumbnail patterns** that recur among outliers (write them in `research/topic.md`; if a
    pattern holds across 3+ outliers, use it).
 
+**b2. New-channel breakouts and title study (every run, ~10 min).** The owner's point: many brand-new channels get
+big US views and monetize with only 5–10 videos (Mr. Company: started June 2026, 4 videos, 408K views). Find them and
+learn from their titles:
+1. From the step-b search results (add 3–4 extra searches on today's rotating queries if needed), fetch
+   `channels?part=snippet,statistics` for every channel. **New breakout** = channel `publishedAt` ≤ 180 days ago AND
+   `videoCount` ≤ 15 AND `viewCount` ≥ 100K (or one video ≥ 100K). US/English business, money or consumer-brand content.
+2. For each new breakout, list its uploads (`playlistItems` on its uploads playlist) and get every video's views and
+   title. Note which titles hit and which flopped on the same channel (like Mr. Company: "How Krispy Kreme Destroyed
+   Itself (Again)" 6.3K vs "Wendy's Is (Finally) Getting What They Deserve…" 235K). Same channel, different title =
+   the cleanest evidence there is.
+3. If Claude in Chrome tools are available, open the channel's Videos tab (youtube.com/@handle/videos), take one
+   screenshot, and describe the thumbnail style (background, subject, text words, colour, underline/arrows).
+4. Append each channel to `state/new_channels.json` (`{date_found, channel_id, handle, title, created, videos,
+   total_views, subs, best_video:{title,views}, worst_video:{title,views}, title_patterns, thumbnail_style}`); skip ones
+   already logged unless their numbers changed a lot.
+5. Update `state/title_patterns.md`: one line per pattern with its formula, 2–4 real examples with views and dates, and
+   how many channels use it; mark patterns as **rising** (new examples in the last 14 days with high views) or
+   **fading** (recent examples flopping). Keep it short (≤ 40 patterns); merge duplicates. Also record our own results
+   by pattern from step a.
+6. Note: whether a channel is monetized is not visible in the API; do not claim it. Views, subs, dates and titles are.
+
 **c. Choose today's topic.**
 - Default (2 of every 3 days): the **first `status:"todo"` item** in `state/topic_queue.json` (the playbook slate,
   in priority order: Dollar General, Costco hot dog, self storage, food truck, laundromat, DoorDash, gas station,
@@ -51,7 +72,9 @@ the price title "Car Washes Want You on $29.99/Month." is still the best perform
 - Every 3rd day (count the last two entries in `state/videos.json`; if neither came from an outlier): the strongest
   outlier candidate. A very strong outlier (≥ 1M views or ratio ≥ 10, published ≤ 30 days ago) may jump the queue any day.
 - Never repeat a subject from `state/videos.json` in the last 30 days; at most 2 car-related videos per 7 days.
-- Title: the playbook title style (price + question, e.g. "A $5 Basket at Dollar General: How Much Does the Store
+- Title: read `state/title_patterns.md` first and write 3 title options from the strongest **rising** patterns that
+  honestly fit the facts, then pick one and record its pattern name in `title_format`. Without a better-evidenced
+  pattern, the playbook title style (price + question, e.g. "A $5 Basket at Dollar General: How Much Does the Store
   Keep?") is the default for slate topics. Use the comeuppance title ("<Brand> Is (Finally) Getting What They
   Deserve…") only when there is a real, dated, verified fall AND it is a household brand. For outlier topics, follow the
   outlier's proven title pattern in our own words.
