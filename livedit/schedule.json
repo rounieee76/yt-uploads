@@ -1,59 +1,59 @@
 {
- "slots_et": [
-  "08:00",
-  "19:00"
- ],
- "note": "Two videos a day at 8:00 AM and 7:00 PM US Eastern. publishAt in UTC (EST = UTC-5 until Mar 8 2027, then EDT = UTC-4). A subject is claimed by adding it here BEFORE work starts (status: claimed) so two runs never make the same video.",
- "videos": [
-  {
-   "subject": "Genghis Khan",
-   "slug": "genghis",
-   "video_id": "amLt4aU1bYo",
-   "publish_at": "2026-11-26T19:00:00Z",
-   "status": "public"
-  },
-  {
-   "subject": "Al Capone",
-   "slug": "capone",
-   "video_id": "Go3wvmMfxZQ",
-   "publish_at": "2026-11-27T00:00:00Z",
-   "status": "scheduled"
-  },
-  {
-   "subject": "Miyamoto Musashi",
-   "slug": "musashi",
-   "video_id": "EfuDs5yDhh8",
-   "publish_at": "2026-11-27T13:00:00Z",
-   "status": "scheduled",
-   "claimed_at": "2026-11-26T18:47:07Z",
-   "run": "main-session"
-  },
-  {
-   "subject": "Jesse James",
-   "slug": "jesse",
-   "video_id": null,
-   "publish_at": "2026-11-28T00:00:00Z",
-   "status": "rendering",
-   "claimed_at": "2026-11-26T18:47:07Z",
-   "run": "main-session"
-  },
-  {
-   "subject": "King Leonidas",
-   "slug": "leonidas",
-   "video_id": null,
-   "publish_at": "2026-11-28T13:00:00Z",
-   "status": "voicing",
-   "claimed_at": "2026-11-26T18:47:07Z",
-   "run": "main-session"
-  },
-  {
-   "subject": "Blackbeard",
-   "slug": "blackbeard",
-   "video_id": null,
-   "publish_at": "2026-11-29T00:00:00Z",
-   "status": "rendering",
-   "claimed_at": "2026-11-26T19:48:14Z",
-   "run": "B"
-  }
- ]
+  "slots_et": [
+    "08:00",
+    "19:00"
+  ],
+  "note": "Two videos a day at 8:00 AM and 7:00 PM US Eastern. publishAt in UTC (EST = UTC-5 until Mar 8 2027, then EDT = UTC-4). A subject is claimed by adding it here BEFORE work starts (status: claimed) so two runs never make the same video.",
+  "videos": [
+    {
+      "subject": "Genghis Khan",
+      "slug": "genghis",
+      "video_id": "amLt4aU1bYo",
+      "publish_at": "2026-11-26T19:00:00Z",
+      "status": "public"
+    },
+    {
+      "subject": "Al Capone",
+      "slug": "capone",
+      "video_id": "Go3wvmMfxZQ",
+      "publish_at": "2026-11-27T00:00:00Z",
+      "status": "scheduled"
+    },
+    {
+      "subject": "Miyamoto Musashi",
+      "slug": "musashi",
+      "video_id": "EfuDs5yDhh8",
+      "publish_at": "2026-11-27T13:00:00Z",
+      "status": "scheduled",
+      "claimed_at": "2026-11-26T18:47:07Z",
+      "run": "main-session"
+    },
+    {
+      "subject": "Jesse James",
+      "slug": "jesse",
+      "video_id": "waDoCElmsSE",
+      "publish_at": "2026-11-28T00:00:00Z",
+      "status": "scheduled",
+      "claimed_at": "2026-11-26T18:47:07Z",
+      "run": "main-session"
+    },
+    {
+      "subject": "King Leonidas",
+      "slug": "leonidas",
+      "video_id": null,
+      "publish_at": "2026-11-28T13:00:00Z",
+      "status": "rendering",
+      "claimed_at": "2026-11-26T18:47:07Z",
+      "run": "main-session"
+    },
+    {
+      "subject": "Blackbeard",
+      "slug": "blackbeard",
+      "video_id": null,
+      "publish_at": "2026-11-29T00:00:00Z",
+      "status": "rendering",
+      "claimed_at": "2026-11-26T19:48:14Z",
+      "run": "B"
+    }
+  ]
 }
