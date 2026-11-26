@@ -219,8 +219,8 @@ and header `Content-Type: application/json`. If it is `unlisted` (owner vetoed) 
 Then message the owner with the result.
 
 ---
-## Review & re-package task (separate schedule, ~8:41 PM ET daily)
-Goal: raise CTR and reach of videos already out. Clone the repo (or `git pull`).
+## Review & re-package task (separate schedule, ~2:41 AM ET = 1:11 PM IST daily, when the owner's laptop is usually on)
+Goal: raise CTR and reach of videos already out. Clone the repo (or `git pull`). Push with `git pull --rebase` first (the production task also writes state files).
 1. **Measure.** For every public video ≤ 45 days old:
    - Studio (best — has impressions and CTR): if Claude in Chrome responds, open
      `https://studio.youtube.com/channel/UC_4MlW0Gh4XhvooLjLZCigA/analytics/tab-content/period-default/explore?entity_type=CHANNEL&entity_id=UC_4MlW0Gh4XhvooLjLZCigA&time_period=4_weeks&explore_type=TABLE_AND_CHART&metric=VIDEO_THUMBNAIL_IMPRESSIONS&granularity=DAY&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS_VTR&t_metrics=VIEWS&t_metrics=AVERAGE_WATCH_TIME&dimension=VIDEO&o_column=VIDEO_THUMBNAIL_IMPRESSIONS&o_direction=ANALYTICS_ORDER_DIRECTION_DESC`,
