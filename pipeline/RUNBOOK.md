@@ -90,6 +90,7 @@ you cannot verify. Lawsuits are **allegations** and must be said so. Estimates a
 description. Copyright: never reproduce more than a short exact quote from any source.
 
 ## 3. Script → `script/narration.json`
+First read `state/lessons.md` and apply every rule in it (they come from our own retention data).
 Same structure as the example (sections → paragraphs → sentences; section `id` + `chapter`). 1,800–2,600 words.
 Comeuppance spine (when the title is "[X] Is/Are (Finally) Getting What They Deserve…"): dated cold open (3-4 facts,
 each worse) → paradox line → promise → [sting] → glory days → how the money works (our identity segment: who pays,
@@ -141,36 +142,42 @@ each; poll `ls scenes/*.mp4 | wc -l`. Re-runs skip unchanged scenes (hash).
 Read **all** time sheets; fix and re-render only changed scenes, then `tools/finish.sh` again. The file must be
 **< 95 MB** (GitHub limit); if bigger, re-encode video with `-crf 22`.
 
-## 9. Thumbnail (Mr. Company style)
-Style (checked on his channel Nov 24, 2026): light-gray seamless studio background; ONE hyper-real hero object in the
-middle (his: the brand's burger/fries/drink); 2–3 casual words at the top in plain bold black sans-serif, mixed case,
-ONE word underlined in red ("it's Finally over", "they're too Greedy", "it Sucks now", "Nobody Eats"). No arrows,
-no dark backgrounds, no clutter.
+## 9. Thumbnail (our winning style — see state/packaging_baseline.md)
+Data (Studio, Nov 2026): dark/saturated photo + big question/claim thumbnails got 3.9–4.3% CTR on thousands of
+impressions; the light-gray minimal style got 2.2% on dealerships. Default = **photoreal, high-contrast scene that
+shows the story + 2–4 huge words** (white, thick black outline, ALL CAPS, one word/number in a red box). Text must
+add a hook the title does not say (title = the topic, thumbnail = the twist). No real logos, no faces of real people.
 1. **Preferred — ChatGPT in the owner's Chrome** (only if `mcp__claude-in-chrome__*` tools are present and respond):
    load the chrome-browser skill; if several browsers are connected, use "Browser 1 (macOS)" deviceId
    `f12d6f9c-d4c0-43a7-9562-90df22077005` (`select_browser`); new tab → `https://chatgpt.com/`; send:
-   > Create an image: a 16:9 YouTube thumbnail (landscape). Clean light-gray seamless studio background with a soft
-   > vignette, like a product photo. At the top, centered, very large bold black sans-serif text (Helvetica / Arial Bold
-   > style, mixed case) that reads exactly: <PHRASE> — with only the word "<WORD>" underlined by a thin straight red line.
-   > Center and bottom: a hyper-realistic commercial studio product shot of <HERO OBJECT>. Crisp, high detail, bright
-   > even lighting, minimal and uncluttered. No other text, no brand logos, no people.
-   Wait ~60–90 s, check the text is spelled right (regenerate once if not), click the image to open the viewer,
-   `zoom` the image region with `save_to_disk: true`, crop the image area with PIL (bright-pixel bounds) and resize to
-   1280×720 → `out/thumbnail.jpg`. Close the tab.
-2. **Fallback:** `tools/venv/bin/python tools/thumb_mc.py --text "<PHRASE>" --underline "<WORD>" --out out/thumbnail.jpg`.
+   > Create an image: a 16:9 YouTube thumbnail, 1280x720, photorealistic, high contrast, saturated, cinematic
+   > lighting. Scene: <ONE CONCRETE SCENE THAT SHOWS THE STORY, foreground object + background>. Big bold text across
+   > the top-left in white with a thick black outline, all caps: "<2-4 WORDS>". The word <WORD> has a red highlight box
+   > behind it. No logos, no brand names, no people's faces, no other text. Keep the text large and readable on a phone.
+   Proven examples: "NOT THE CAR" (loan contract with circled APR in a dealer office), "PLEASE STAY HOME" (empty gym +
+   purple "$22/mo" card), "523 STORES GONE" (parts store with STORE CLOSING banner), "WHO GETS THE REST?" (car wash).
+   Wait ~30–60 s, check spelling (regenerate once if wrong), click the image to open the viewer, move the mouse off it
+   (`hover` at the bottom-right corner), `zoom` region [222,52,1248,630] with `save_to_disk: true` and `scale: 1`
+   (check the region matches the image in a screenshot first), crop to 16:9 and resize to 1280×720 with PIL →
+   `out/thumbnail.jpg`. Close the tab. Free ChatGPT allows a few images a day: one per video.
+2. **Fallback:** `tools/venv/bin/python tools/thumb_mc.py --text "<PHRASE>" --underline "<WORD>" --object <png> --out out/thumbnail.jpg`
+   (crop the object PNG to its bounding box so it fills the frame).
 Read the thumbnail at 320×180 before using it.
 
 ## 10. Title and description
-Title: the comeuppance formula exactly — `<Brand> Is (Finally) Getting What They Deserve…` (industry: `<Businesses>
-Are (Finally) Getting What They Deserve…`) — only when the facts support it. Description (≤ 4,800 bytes, no `<` `>`):
+Title: pick from `state/title_patterns.md` by measured results, not habit. Our only hit anchored a price the viewer pays
+("Car Washes Want You on $29.99/Month."); our three comeuppance titles got 398–834 impressions. Prefer a price/number
+anchor the viewer recognises; use the comeuppance formula only for household brands with a verified fall. ≤ 60
+characters, honest to the video's facts. Description (≤ 4,800 bytes, no `<` `>`):
 cold-open facts as prose; "So what really happened?" line; chapters (from `work/timeline.json` section starts, first
 at 0:00); sources with links; `Music: "Surreptitious" and "Syntheticity" by Tanner Helland, licensed under CC BY 4.0 -
 https://github.com/tannerhelland/free-music` (adjust track names); `Sound effects: SFX Kit by Wyzowl (CC0) -
 https://github.com/wyzowl/sfx-kit`; allegations/estimates/not-advice line; a comment question; 3 hashtags.
 
-## 11. Stage files on GitHub (orphan branch, deleted after upload)
+## 11. Stage files on GitHub (orphan branch `stage`, force-pushed, cleared after upload)
+Branch deletion is blocked by the proxy, so always reuse the branch `stage` (force-push) and clear it in step 13.
 ```
-cd /home/claude/yt-uploads && git checkout -q --orphan stage && git rm -rqf . && mkdir v
+cd /home/claude/yt-uploads && git branch -D stage 2>/dev/null; git checkout -q --orphan stage && git rm -rqf . && mkdir v
 cp /home/claude/ce/out/<name>.mp4 v/video.mp4 && cp /home/claude/ce/out/thumbnail.jpg v/thumbnail.jpg
 git add v && git commit -qm "stage" && git push -qf origin stage && git checkout -q main
 ```
@@ -183,7 +190,8 @@ URLs: `https://raw.githubusercontent.com/rounieee76/yt-uploads/stage/v/video.mp4
 `default_audio_language: "en"`, `license: "youtube"`. Keep the returned video `id`.
 
 ## 13. Clean up
-`git push -q origin --delete stage` (the files leave the repo).
+Overwrite the branch with a placeholder so the files leave the repo (deleting is blocked):
+`git checkout -q --orphan clr && git rm -rqf . ; echo staging > STAGE.md && git add STAGE.md && git commit -qm clear && git push -qf origin clr:stage && git checkout -q -f main && git branch -D clr`
 
 ## 14. Record state (main branch)
 Write `state/latest.json` = `{"date","video_id","title","topic","category","origin","title_format","status":"private_awaiting_publish"}` and
@@ -209,3 +217,38 @@ Read `https://raw.githubusercontent.com/rounieee76/yt-uploads/main/state/latest.
 `{"id":"<id>","status":{"privacyStatus":"public","selfDeclaredMadeForKids":false,"embeddable":true,"publicStatsViewable":true,"license":"youtube"}}`
 and header `Content-Type: application/json`. If it is `unlisted` (owner vetoed) or already `public`, do nothing.
 Then message the owner with the result.
+
+---
+## Review & re-package task (separate schedule, ~8:41 PM ET daily)
+Goal: raise CTR and reach of videos already out. Clone the repo (or `git pull`).
+1. **Measure.** For every public video ≤ 45 days old:
+   - Studio (best — has impressions and CTR): if Claude in Chrome responds, open
+     `https://studio.youtube.com/channel/UC_4MlW0Gh4XhvooLjLZCigA/analytics/tab-content/period-default/explore?entity_type=CHANNEL&entity_id=UC_4MlW0Gh4XhvooLjLZCigA&time_period=4_weeks&explore_type=TABLE_AND_CHART&metric=VIDEO_THUMBNAIL_IMPRESSIONS&granularity=DAY&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS_VTR&t_metrics=VIEWS&t_metrics=AVERAGE_WATCH_TIME&dimension=VIDEO&o_column=VIDEO_THUMBNAIL_IMPRESSIONS&o_direction=ANALYTICS_ORDER_DIRECTION_DESC`,
+     screenshot the table (page text is empty — read the screenshot) and record impressions, CTR, views, avg duration.
+     For a video's last 48 h use its own page `https://studio.youtube.com/video/<id>/analytics/tab-reach_viewers/period-default`.
+   - API (always): Data API `videos?part=snippet,statistics,contentDetails` for views/thumbnail; Analytics API
+     (`ids=channel==MINE`, lags ~2 days): `views,averageViewPercentage,subscribersGained` by `video`;
+     `insightTrafficSourceType` by video (`SUBSCRIBER` = Browse/home feed, `RELATED_VIDEO` = Suggested);
+     `audienceWatchRatio,relativeRetentionPerformance` by `elapsedVideoTimeRatio` with `filters=video==<id>;audienceType==ORGANIC`.
+     Impressions/CTR are NOT in the API (400) and the Reporting API is disabled (403) — use Studio for those.
+2. **Diagnose** each video (write one line per video in the owner message):
+   - impressions < 1,000 after 48 h → reach problem: topic/title not getting tested → change TITLE first.
+   - impressions ≥ 1,000 and CTR < 4% → packaging problem → change THUMBNAIL (then title on the next round).
+   - CTR ≥ 4% but views stalled and avg view % < 35% or >35% lost in first 10% → story problem: leave packaging,
+     add a lesson to `state/lessons.md` (what the first 60 s did, what to change in future scripts).
+   - Views still rising day over day → change nothing.
+3. **Change** (at most 2 videos per day): title via PUT `videos?part=snippet` with the full snippet (title,
+   categoryId "27", the same description, tags, defaultLanguage, defaultAudioLanguage) — a missing description is
+   wiped, so always send it; thumbnail via step 9 (ChatGPT, else thumb_mc.py), staged per step 11, set with
+   `youtube_update_video_thumbnail`, branch cleared per step 13.
+   Guardrails: ≥ 48 h after publish; ≥ 72 h since the last change to that video; one variable per change unless the
+   video had no custom thumbnail; ≤ 3 changes per video, then stop and log it as a story lesson; titles stay honest to
+   the video (no claims it does not prove); never touch a video whose views are rising; never change the hit
+   (DjbxaXK8hcw) unless its views are flat for 7 days, and then only the thumbnail.
+4. **Log** each change in `state/experiments.json` (id, video_id, changed_at, change, before{title/thumbnail,
+   impressions, ctr, views}, after, hypothesis, check_after = +72 h, result null). On each run, fill `result` for
+   experiments past `check_after`: CTR and impressions/day after vs before, verdict win/loss/flat. Add wins and losses
+   to `state/title_patterns.md` (titles) and the "thumbnail rules" list in `state/packaging_baseline.md`; add story
+   lessons to `state/lessons.md`. The production task reads these files in step 1 and step 3.
+5. Commit and push main; message the owner: one line per video (impr · CTR · views · diagnosis), changes made,
+   experiment results.

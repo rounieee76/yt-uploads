@@ -1,0 +1,76 @@
+[
+ {
+  "id": "exp-001",
+  "video_id": "UPrz3aBKHPk",
+  "changed_at": "2026-11-26T10:47Z",
+  "change": "title",
+  "before": {
+   "title": "Car Washes Are (Finally) Getting What They Deserve…",
+   "impressions": 398,
+   "ctr": 4.3,
+   "views": 32,
+   "avg_view_duration": "4:31",
+   "window": "Nov 24-25 (Studio, lifetime)"
+  },
+  "after": {
+   "title": "The $29.99 Car Wash Bubble Just Popped"
+  },
+  "hypothesis": "Problem is reach (only 398 impressions), not CTR. Our only hit anchored a price ($29.99). Try the price anchor in the title.",
+  "check_after": "2026-11-29",
+  "result": null
+ },
+ {
+  "id": "exp-002",
+  "video_id": "XQGpftHCcCg",
+  "changed_at": "2026-11-26T10:55Z",
+  "change": "title + first custom thumbnail",
+  "before": {
+   "title": "Why Planet Fitness Needs You to Stay Home",
+   "thumbnail": "none (auto frame)",
+   "impressions": 4112,
+   "ctr": 2.1,
+   "views": 205
+  },
+  "after": {
+   "title": "Planet Fitness Wants Your $22/Month. Not You.",
+   "thumbnail": "ChatGPT dark photo: empty gym + purple '$22/mo' card, 'PLEASE STAY HOME' (set 11:05Z, replaced a PIL draft set at 10:55Z)"
+  },
+  "hypothesis": "2.1% CTR with an auto frame thumbnail. A real thumbnail + price-anchored title should lift CTR above 4%.",
+  "check_after": "2026-11-29",
+  "result": null
+ },
+ {
+  "id": "exp-003",
+  "video_id": "syucMyOk2dE",
+  "changed_at": "2026-11-26T11:03Z",
+  "change": "thumbnail",
+  "before": {
+   "thumbnail": "light-gray MrCompany 'the Markup is Over'",
+   "impressions": 834,
+   "ctr": 2.2,
+   "views": 32,
+   "avg_view_duration": "4:26"
+  },
+  "after": {
+   "thumbnail": "ChatGPT dark photo: loan contract with circled 7.99% APR in dealer office, 'NOT THE CAR'"
+  },
+  "hypothesis": "2.2% CTR = packaging. Hit-style thumbnail (photo, high contrast, twist words) should beat 4%.",
+  "check_after": "2026-11-29",
+  "result": null
+ },
+ {
+  "id": "exp-004",
+  "video_id": "U0zRiFwix_8",
+  "changed_at": "2026-11-26T11:10Z",
+  "change": "launch thumbnail swapped before publish",
+  "before": {
+   "thumbnail": "light-gray MrCompany style (never public)"
+  },
+  "after": {
+   "thumbnail": "ChatGPT dark photo: closing parts store, '523 STORES GONE'"
+  },
+  "hypothesis": "First comeuppance video launched with the hit's thumbnail style; compare its 72 h impressions/CTR with dealerships (834 / 2.2%).",
+  "check_after": "2026-11-29",
+  "result": null
+ }
+]
