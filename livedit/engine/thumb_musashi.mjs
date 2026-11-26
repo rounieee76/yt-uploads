@@ -1,0 +1,11 @@
+import { char, put } from './chars.mjs';
+import { templeIn, beach, J } from './japan.mjs';
+import { open, snap, close } from './snap.mjs';
+const txt = (x, y, t, size, fill, rot = 0) => `<g transform="rotate(${rot} ${x} ${y})"><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="none" stroke="#0A0604" stroke-width="${size * 0.16}" stroke-linejoin="round">${t}</text><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="${fill}">${t}</text></g>`;
+const MU = { hair: 'wild', hairColor: '#1E1612', outfit: 'ragged', skin: 'tan', swords: true, h: 490, stubble: true, headband: '#E9E2D2' };
+let s = `<defs><clipPath id="L"><path d="M0 0 H900 L1020 1080 H0Z"/></clipPath><clipPath id="R"><path d="M900 0 H1920 V1080 H1020Z"/></clipPath><radialGradient id="g1" cx="0.35" cy="0.5" r="0.6"><stop offset="0" stop-color="#FFB45A" stop-opacity=".6"/><stop offset="1" stop-color="#FFB45A" stop-opacity="0"/></radialGradient><radialGradient id="g2" cx="0.6" cy="0.4" r="0.6"><stop offset="0" stop-color="#FFD8A0" stop-opacity=".7"/><stop offset="1" stop-color="#FFD8A0" stop-opacity="0"/></radialGradient></defs>`;
+s += `<g clip-path="url(#L)">${templeIn({ wall: '#B8A07A' })}<rect width="1920" height="1080" fill="#1A1430" opacity=".3"/><rect width="1920" height="1080" fill="url(#g1)"/>${put(char({ age: 'baby', expr: 'angry', skin: 'tan', blanket: '#8A7A5A', hair: 'tuft', h: 300 }), 460, 1040, 1.3)}</g>`;
+s += `<g clip-path="url(#R)">${beach({ mode: 'dawn', horizon: 640, sun: [1500, 420], far: true, sandY: 940 })}<rect width="1920" height="1080" fill="url(#g2)"/>${put(char({ ...MU, expr: 'smirk', pose: 'hold', ...{ holding: `<g transform="rotate(-25)">${J.oar(340)}</g>`, holdHand: 'right' } }), 1460, 1480, 2.0)}</g>`;
+s += `<path d="M900 0 L1020 1080" stroke="#0A0604" stroke-width="22"/><path d="M900 0 L1020 1080" stroke="#F4E6C8" stroke-width="8"/>`;
+s += txt(450, 210, 'AGE 0', 190, '#FFFFFF', -3) + txt(1470, 200, '60 DUELS', 200, '#FFD23A', 2);
+await open(1280 / 1920); await snap(s, '/home/claude/lived/musashi/out/thumbnail.png', '#000'); await close();

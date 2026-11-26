@@ -1,0 +1,12 @@
+import { char, put } from './chars.mjs';
+import { prairie, farmhouse, locomotive, rails } from './west.mjs';
+import { open, snap, close } from './snap.mjs';
+const txt = (x, y, t, size, fill, rot = 0) => `<g transform="rotate(${rot} ${x} ${y})"><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="none" stroke="#0A0604" stroke-width="${size * 0.16}" stroke-linejoin="round">${t}</text><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="${fill}">${t}</text></g>`;
+const JJ = { hair: 'short', hairColor: '#5A3A22', hat: 'cowboy', hatColor: '#4A3424', outfit: 'duster', skin: 'light', h: 480, stubble: true };
+const REV = '<g transform="rotate(-150)"><rect x="-8" y="-10" width="70" height="16" rx="4" fill="#3A3A40" stroke="#24170F" stroke-width="3"/><rect x="-26" y="-6" width="26" height="34" rx="6" fill="#6A4028" stroke="#24170F" stroke-width="3"/></g>';
+let s = `<defs><clipPath id="L"><path d="M0 0 H900 L1020 1080 H0Z"/></clipPath><clipPath id="R"><path d="M900 0 H1920 V1080 H1020Z"/></clipPath><radialGradient id="g2" cx="0.7" cy="0.6" r="0.6"><stop offset="0" stop-color="#FF8A3A" stop-opacity=".7"/><stop offset="1" stop-color="#FF8A3A" stop-opacity="0"/></radialGradient></defs>`;
+s += `<g clip-path="url(#L)">${prairie({ mode: 'day', fence: true, horizon: 760 })}${farmhouse(700, 800, 0.8)}${put(char({ age: 'baby', expr: 'smile', skin: 'light', blanket: '#C9B89A', h: 300 }), 450, 1060, 1.35)}</g>`;
+s += `<g clip-path="url(#R)">${prairie({ mode: 'dusk', sun: [1700, 600], horizon: 760 })}${rails(930)}${locomotive(1750, 1000, 0.8, true)}<rect width="1920" height="1080" fill="url(#g2)"/>${put(char({ ...JJ, expr: 'smirk', pose: 'point', holding: REV, holdHand: 'right' }), 1380, 1500, 2.1)}</g>`;
+s += `<path d="M900 0 L1020 1080" stroke="#0A0604" stroke-width="22"/><path d="M900 0 L1020 1080" stroke="#F4E6C8" stroke-width="8"/>`;
+s += txt(450, 210, 'AGE 0', 190, '#FFFFFF', -3) + txt(1460, 190, 'MOST WANTED', 140, '#FFD23A', 2);
+await open(1280 / 1920); await snap(s, '/home/claude/lived/jesse/out/thumbnail.png', '#000'); await close();
