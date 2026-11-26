@@ -5,7 +5,8 @@
   "title": "5 Boring Businesses That Quietly Make People Rich in America",
   "category": "list",
   "views_2026_11_24": 274,
-  "views_2026_11_26": 274
+  "views_2026_11_26": 274,
+  "status": "private (owner, 2026-11-26 format switch)"
  },
  {
   "date": "2026-11-03",
@@ -22,7 +23,8 @@
   "title": "Why Planet Fitness Needs You to Stay Home",
   "category": "subscriptions / gyms",
   "views_2026_11_24": 205,
-  "views_2026_11_26": 205
+  "views_2026_11_26": 205,
+  "status": "private (owner, 2026-11-26 format switch)"
  },
  {
   "date": "2026-11-24",
@@ -31,7 +33,7 @@
   "topic": "Car wash industry: Zips bankruptcy, membership lawsuits, Mister Car Wash take-private",
   "category": "car / roadside businesses",
   "format": "comeuppance",
-  "status": "public",
+  "status": "private (owner, 2026-11-26 format switch)",
   "views_2026_11_25": 29,
   "views_2026_11_26": 32
  },
@@ -42,7 +44,7 @@
   "topic": "US car dealerships: markup years ended (AutoNation new-car GP/unit $5,942→$2,176), F&I and service now ~80% of gross, FTC dealer cases, CA SB 766, Tricolor collapse, subprime delinquencies",
   "category": "car / roadside businesses",
   "format": "comeuppance",
-  "status": "public",
+  "status": "private (owner, 2026-11-26 format switch)",
   "views_2026_11_26": 26
  },
  {
@@ -52,6 +54,6 @@
   "topic": "Advance Auto Parts fall: May 2023 dividend cut ($1.50→$0.25) and −35% day, junk rating, accounting errors/late 10-K, 523 store closures (Nov 2024), Worldpac sale, 38 DCs; vs AutoZone/O'Reilly; stock −81% from peak; Pep Boys/NAPA context",
   "category": "car / roadside businesses",
   "format": "comeuppance",
-  "status": "private_awaiting_publish"
+  "status": "private (owner, 2026-11-26 format switch)"
  }
 ]
