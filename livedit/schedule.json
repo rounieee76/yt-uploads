@@ -22,9 +22,9 @@
   {
    "subject": "Miyamoto Musashi",
    "slug": "musashi",
-   "video_id": null,
+   "video_id": "EfuDs5yDhh8",
    "publish_at": "2026-11-27T13:00:00Z",
-   "status": "rendering",
+   "status": "scheduled",
    "claimed_at": "2026-11-26T18:47:07Z",
    "run": "main-session"
   },
@@ -33,7 +33,7 @@
    "slug": "jesse",
    "video_id": null,
    "publish_at": "2026-11-28T00:00:00Z",
-   "status": "ready-to-render",
+   "status": "rendering",
    "claimed_at": "2026-11-26T18:47:07Z",
    "run": "main-session"
   },

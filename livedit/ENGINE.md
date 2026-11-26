@@ -65,7 +65,11 @@ Split "AGE 0" (baby, warm) | adult at the most dramatic moment + 1–2 word clai
 Title: `What If You Were Born as <Name>? | <World>` (A/B later with `Live <Name>'s Entire Life in <N> Minutes`).
 Description: 2-line hook, chapter timestamps (from timeline), "Who should be next? Comment below.", sources, music credit.
 
-## 10. Stage, upload, schedule (see pipeline/RUNBOOK.md steps 11–13 for staging)
+## 10. Stage, upload, schedule
+Staging branch: use **`stage-<slug>`** (one per video, never the shared `stage`) so two runs can't overwrite each other:
+`git checkout -q --orphan stage-<slug> && git rm -rqf . && mkdir v && cp <final.mp4> v/video.mp4 && cp <thumbnail.jpg> v/thumbnail.jpg && git add v && git commit -qm stage && git push -qf origin stage-<slug> && git checkout -q -f main`
+URLs: `https://raw.githubusercontent.com/rounieee76/yt-uploads/stage-<slug>/v/video.mp4` (and thumbnail.jpg).
+After upload, clear it (deletes are blocked): orphan branch with only STAGE.md, `git push -qf origin <tmp>:stage-<slug>`.
 Upload with `youtube_upload_video` (private), then PUT `videos?part=status` with `privacyStatus: private` and
 `publishAt` = next free slot. **Slots: 8:00 AM ET and 7:00 PM ET every day** (13:00Z / 00:00Z in winter, EST).
 Schedule call that works (body as JSON string, part in querystring):
