@@ -29,6 +29,7 @@ def normalize(t):
     t = t.replace("CDK", "C D K").replace("CARS Rule", "Cars Rule").replace("CEO", "C E O").replace("GM ", "G M ").replace("AutoNation", "Auto Nation").replace("pretax", "pre-tax")
     t = t.replace("U.S.", "U S").replace("FTC", "F T C").replace("IPO", "I P O")
     t = t.replace("SUVs", "S U Vs").replace("Take 5", "Take Five").replace("CoStar", "Co-Star")
+    t = t.replace("Worldpac", "World Pac").replace("Carquest", "Car Quest").replace("AutoZone", "Auto Zone").replace("NAPA", "Napa").replace("S and P", "S and P")
     t = t.replace("…", ".").replace("—", ", ")
     t = re.sub(r"\b(\d+)(st|nd|rd|th)\b", lambda m: num2words(int(m.group(1)), to="ordinal"), t)
     t = re.sub(r"\b(19|20)\d{2}\b", year, t)

@@ -4,7 +4,8 @@
   "video_id": "_DMac623hvI",
   "title": "5 Boring Businesses That Quietly Make People Rich in America",
   "category": "list",
-  "views_2026_11_24": 274
+  "views_2026_11_24": 274,
+  "views_2026_11_26": 274
  },
  {
   "date": "2026-11-03",
@@ -12,14 +13,16 @@
   "title": "Car Washes Want You on $29.99/Month.",
   "category": "car / roadside businesses",
   "views_2026_11_24": 6216,
-  "views_2026_11_25": 6227
+  "views_2026_11_25": 6227,
+  "views_2026_11_26": 6227
  },
  {
   "date": "2026-11-05",
   "video_id": "XQGpftHCcCg",
   "title": "Why Planet Fitness Needs You to Stay Home",
   "category": "subscriptions / gyms",
-  "views_2026_11_24": 205
+  "views_2026_11_24": 205,
+  "views_2026_11_26": 205
  },
  {
   "date": "2026-11-24",
@@ -29,13 +32,24 @@
   "category": "car / roadside businesses",
   "format": "comeuppance",
   "status": "public",
-  "views_2026_11_25": 29
+  "views_2026_11_25": 29,
+  "views_2026_11_26": 32
  },
  {
   "date": "2026-11-25",
   "video_id": "syucMyOk2dE",
   "title": "Car Dealerships Are (Finally) Getting What They Deserve…",
   "topic": "US car dealerships: markup years ended (AutoNation new-car GP/unit $5,942→$2,176), F&I and service now ~80% of gross, FTC dealer cases, CA SB 766, Tricolor collapse, subprime delinquencies",
+  "category": "car / roadside businesses",
+  "format": "comeuppance",
+  "status": "public",
+  "views_2026_11_26": 26
+ },
+ {
+  "date": "2026-11-26",
+  "video_id": "U0zRiFwix_8",
+  "title": "Advance Auto Parts Is (Finally) Getting What They Deserve…",
+  "topic": "Advance Auto Parts fall: May 2023 dividend cut ($1.50→$0.25) and −35% day, junk rating, accounting errors/late 10-K, 523 store closures (Nov 2024), Worldpac sale, 38 DCs; vs AutoZone/O'Reilly; stock −81% from peak; Pep Boys/NAPA context",
   "category": "car / roadside businesses",
   "format": "comeuppance",
   "status": "private_awaiting_publish"
