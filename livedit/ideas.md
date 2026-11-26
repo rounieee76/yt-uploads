@@ -48,15 +48,19 @@ Sensitive, not yet: Stalin, JFK. Skip: living people (Ronaldo, Messi, Tyson, Gog
 13. People openly say "vibecoded / which AI?". The art has to look hand-made and consistent; don't claim "all original" if it isn't.
 
 ## 3. Our queue (real people, myths and legends; nobody owns them)
-1. Genghis Khan: DONE 2026-11-26 (amLt4aU1bYo)
-2. **Al Capone**, for the biggest cluster (GTA + Mafia: Trevor, Michael, Vito, Niko, Franklin, Claude, ~900 likes)
-3. **A samurai of Tsushima 1274 / Miyamoto Musashi**, for Jin Sakai (342 likes, asked on 8 of 10 videos)
-4. **Jesse James**, for Arthur/Dutch/Marston fans (Wild West series opener)
-5. **King Leonidas**, asked directly, and for Kratos fans
-6. **Blackbeard**, for Jack Sparrow
-7. **Hercules / Zeus / Hades**, myths asked directly (Greek series)
-8. **Napoleon**, asked directly
-9. **Sun Wukong**, asked 3 times (myth)
-10. Billy the Kid / Doc Holliday, as Wild West series part 2
-11. Hassan-i Sabbah (the real Assassins), for Agent 47 and Ezio/Altaïr fans
-12. Khalid ibn al-Walid, Spartacus, Vlad the Impaler, Jan Žižka, Achilles
+Made (see livedit/schedule.json for publish slots): Genghis Khan · Al Capone · Miyamoto Musashi · Jesse James · King Leonidas
+Next, in order (claim in livedit/schedule.json before starting):
+1. **Blackbeard**, for Jack Sparrow fans (pirate kit needed: ship deck, sea battle, Caribbean town)
+2. **Hercules**, myth (Greek kit exists)
+3. **Napoleon**, asked directly
+4. **Sun Wukong**, asked 3 times (myth)
+5. **Billy the Kid**, Wild West part 2 (west kit exists)
+6. **Spartacus**, gladiator (Rome kit needed)
+7. **Hassan-i Sabbah**, the real Assassins (for Agent 47 / Ezio / Altaïr fans)
+8. **Vlad the Impaler**, the real Dracula
+9. **Lucky Luciano**, mob part 2 (Capone kit exists)
+10. **Achilles**, myth (Greek kit)
+11. **Khalid ibn al-Walid**, asked directly
+12. **Jan Žižka**, the one-eyed general (for Kingdom Come fans)
+13. **Doc Holliday**, Wild West part 3
+14. **Zeus** / **Hades**, myths (Greek kit)
