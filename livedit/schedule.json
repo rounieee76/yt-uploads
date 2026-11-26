@@ -50,8 +50,8 @@
    "subject": "Blackbeard",
    "slug": "blackbeard",
    "video_id": null,
-   "publish_at": null,
-   "status": "claimed",
+   "publish_at": "2026-11-29T00:00:00Z",
+   "status": "rendering",
    "claimed_at": "2026-11-26T19:48:14Z",
    "run": "B"
   }
