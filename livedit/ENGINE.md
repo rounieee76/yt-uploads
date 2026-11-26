@@ -68,4 +68,7 @@ Description: 2-line hook, chapter timestamps (from timeline), "Who should be nex
 ## 10. Stage, upload, schedule (see pipeline/RUNBOOK.md steps 11–13 for staging)
 Upload with `youtube_upload_video` (private), then PUT `videos?part=status` with `privacyStatus: private` and
 `publishAt` = next free slot. **Slots: 8:00 AM ET and 7:00 PM ET every day** (13:00Z / 00:00Z in winter, EST).
+Schedule call that works (body as JSON string, part in querystring):
+`youtube_make_api_mutating_request` params `{"method":"PUT","url":"https://www.googleapis.com/youtube/v3/videos","querystring":{"part":"status"},"headers":{"Content-Type":"application/json"},"body":"{\"id\":\"<ID>\",\"status\":{\"privacyStatus\":\"private\",\"publishAt\":\"<UTC>\",\"selfDeclaredMadeForKids\":false,\"embeddable\":true,\"license\":\"youtube\",\"publicStatsViewable\":true}}","fail_on_errors":"false"}`
+Final file must be < 95 MB: our film grain defeats CRF, so encode with `-vf hqdn3d=3:3:8:8 -b:v 1200k -maxrate 1800k -bufsize 3600k` (≈ 90 MB for 9.5 min; scale bitrate to length).
 Record in `state/latest.json` + `livedit/schedule.json`.

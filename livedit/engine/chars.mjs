@@ -97,6 +97,9 @@ function hat(o, r) {
     case 'police': return `<g transform="translate(0 ${-r * 0.64})"><path d="M${-r * 0.95} ${r * 0.1} L${-r * 1.05} ${-r * 0.5} Q0 ${-r * 0.75} ${r * 1.05} ${-r * 0.5} L${r * 0.95} ${r * 0.1}Z" fill="${c}" ${OL()}/><path d="M${-r * 0.9} ${r * 0.08} Q0 ${r * 0.4} ${r * 0.9} ${r * 0.08}" fill="${INK}" ${OL(3)}/><path d="M${-r * 0.12} ${-r * 0.45} l${r * 0.12} ${-r * 0.12} l${r * 0.12} ${r * 0.12} l${-r * 0.12} ${r * 0.14}Z" fill="#E2B43C" ${OL(2.5)}/></g>`;
     case 'cowboy': return `<g transform="translate(0 ${-r * 0.62})"><path d="M${-r * 1.7} ${r * 0.05} Q${-r * 1.6} ${-r * 0.35} ${-r * 1.15} ${-r * 0.12} Q0 ${r * 0.12} ${r * 1.15} ${-r * 0.12} Q${r * 1.6} ${-r * 0.35} ${r * 1.7} ${r * 0.05} Q0 ${r * 0.45} ${-r * 1.7} ${r * 0.05}Z" fill="${c}" ${OL()}/><path d="M${-r * 0.85} ${-r * 0.05} Q${-r * 0.95} ${-r * 0.95} ${-r * 0.3} ${-r * 0.95} Q0 ${-r * 0.72} ${r * 0.3} ${-r * 0.95} Q${r * 0.95} ${-r * 0.95} ${r * 0.85} ${-r * 0.05}Z" fill="${c}" ${OL()}/><path d="M${-r * 0.86} ${-r * 0.12} Q0 ${r * 0.0} ${r * 0.86} ${-r * 0.12} L${r * 0.84} ${-r * 0.3} Q0 ${-r * 0.18} ${-r * 0.84} ${-r * 0.3}Z" fill="${o.bandColor || '#3A2418'}"/></g>`;
     case 'kepi': return `<g transform="translate(0 ${-r * 0.62})"><path d="M${-r * 0.9} ${r * 0.1} L${-r * 0.8} ${-r * 0.75} L${r * 0.7} ${-r * 0.65} L${r * 0.9} ${r * 0.1}Z" fill="${c}" ${OL()}/><path d="M${-r * 0.9} ${r * 0.1} Q${-r * 0.2} ${r * 0.45} ${r * 0.5} ${r * 0.18} L${r * 0.9} ${r * 0.1}" fill="${INK}" ${OL(3)}/></g>`;
+    case 'corinthian': { const cr = o.crest || '#A8282A'; return `<g transform="translate(0 ${-r * 0.05})"><path d="M${-r * 1.08} ${r * 0.55} L${-r * 1.1} ${-r * 0.4} Q${-r * 1.05} ${-r * 1.18} 0 ${-r * 1.2} Q${r * 1.05} ${-r * 1.18} ${r * 1.1} ${-r * 0.4} L${r * 1.08} ${r * 0.55} L${r * 0.55} ${r * 0.6} L${r * 0.6} ${-r * 0.05} L${-r * 0.6} ${-r * 0.05} L${-r * 0.55} ${r * 0.6}Z" fill="${c}" ${OL()}/><path d="M${-r * 0.1} ${-r * 0.05} L${-r * 0.1} ${r * 0.35} L${r * 0.1} ${r * 0.35} L${r * 0.1} ${-r * 0.05}" fill="${c}" ${OL(3)}/><path d="M${-r * 0.95} ${-r * 0.95} Q0 ${-r * 2.3} ${r * 0.95} ${-r * 0.95} Q0 ${-r * 1.25} ${-r * 0.95} ${-r * 0.95}Z" fill="${cr}" ${OL(4)}/><path d="M${-r * 0.7} ${-r * 0.9} Q${-r * 0.4} ${-r * 1.05} ${-r * 0.1} ${-r * 0.98}" stroke="${shade(c, 0.35)}" stroke-width="${r * 0.08}" fill="none" stroke-linecap="round"/></g>`; }
+    case 'tiara': return `<g transform="translate(0 ${-r * 0.62})"><path d="M${-r * 0.9} ${r * 0.1} L${-r * 0.75} ${-r * 0.8} L${r * 0.75} ${-r * 0.8} L${r * 0.9} ${r * 0.1}Z" fill="${c}" ${OL()}/><path d="M${-r * 0.82} ${-r * 0.3} H${r * 0.82}" stroke="#E2B43C" stroke-width="${r * 0.1}"/></g>`;
+    case 'crown': return `<g transform="translate(0 ${-r * 0.62})"><path d="M${-r * 0.85} ${r * 0.1} L${-r * 0.9} ${-r * 0.75} L${-r * 0.45} ${-r * 0.4} L0 ${-r * 0.95} L${r * 0.45} ${-r * 0.4} L${r * 0.9} ${-r * 0.75} L${r * 0.85} ${r * 0.1}Z" fill="#E2B43C" ${OL()}/><circle cx="0" cy="${-r * 0.3}" r="${r * 0.12}" fill="#C9302A"/></g>`;
     case 'straw': return `<g transform="translate(0 ${-r * 0.62})"><ellipse cx="0" cy="0" rx="${r * 1.5}" ry="${r * 0.28}" fill="${c}" ${OL()}/><path d="M${-r * 0.8} 0 L${-r * 0.75} ${-r * 0.6} L${r * 0.75} ${-r * 0.6} L${r * 0.8} 0Z" fill="${c}" ${OL()}/><rect x="${-r * 0.8}" y="${-r * 0.22}" width="${r * 1.6}" height="${r * 0.18}" fill="#7A2E22"/></g>`;
     case 'prisoncap': return `<g transform="translate(0 ${-r * 0.62})"><path d="M${-r * 0.95} ${r * 0.1} Q${-r * 1.0} ${-r * 0.55} 0 ${-r * 0.6} Q${r * 1.0} ${-r * 0.55} ${r * 0.95} ${r * 0.1}Z" fill="${c}" ${OL()}/></g>`;
     default: return '';
@@ -123,6 +126,7 @@ export function head(o) {
   s += mouth(r, o.expr);
   if (o.scar) s += [0, 1, 2].map(i => `<path d="M${r * (0.40 + i * 0.11)} ${r * (0.30 + i * 0.03)} l${r * 0.13} ${r * 0.28}" stroke="#A9473A" stroke-width="${r * 0.045}" stroke-linecap="round"/>`).join('');
   if (o.glasses) s += `<circle cx="${-r * 0.42}" cy="0" r="${r * 0.3}" fill="none" ${OL(4)}/><circle cx="${r * 0.42}" cy="0" r="${r * 0.3}" fill="none" ${OL(4)}/><path d="M${-r * 0.12} 0 h${r * 0.24}" ${OL(4)}/>`;
+  if (o.beard) s += `<path d="M${-r * 0.92} ${r * 0.1} Q${-r * 0.95} ${r * 1.0} 0 ${r * (o.beardLong ? 1.55 : 1.22)} Q${r * 0.95} ${r * 1.0} ${r * 0.92} ${r * 0.1} Q${r * 0.6} ${r * 0.45} ${r * 0.3} ${r * 0.62} Q0 ${r * 0.5} ${-r * 0.3} ${r * 0.62} Q${-r * 0.6} ${r * 0.45} ${-r * 0.92} ${r * 0.1}Z" fill="${o.beard}" ${OL(4)}/><path d="M${-r * 0.25} ${r * 0.66} Q0 ${r * 0.74} ${r * 0.25} ${r * 0.66}" fill="none" stroke="#5A1E16" stroke-width="${r * 0.06}"/>`;
   s += hairFront(o, r);
   s += hat(o, r);
   if (o.headband) s += `<path d="M${-r * 1.04} ${-r * 0.42} Q0 ${-r * 0.62} ${r * 1.04} ${-r * 0.42} L${r * 1.04} ${-r * 0.24} Q0 ${-r * 0.44} ${-r * 1.04} ${-r * 0.24}Z" fill="${o.headband}" ${OL(3.5)}/><path d="M${r * 1.0} ${-r * 0.33} q${r * 0.3} ${r * 0.1} ${r * 0.5} ${r * 0.45} M${r * 1.0} ${-r * 0.33} q${r * 0.35} ${-r * 0.05} ${r * 0.6} ${r * 0.2}" stroke="${o.headband}" stroke-width="${r * 0.12}" fill="none" stroke-linecap="round"/>`;
@@ -150,6 +154,12 @@ const OUTFIT = {
   bartender: { top: '#F3EEE2', legs: '#2E2A28', shoes: '#141010', vest: '#2E2A28', apronLong: '#EDE6D6', rolled: true },
   robe: { top: '#2A2A2E', legs: '#2A2A2E', shoes: '#141010', long: true, dress: true },
   worker: { top: '#5E6E84', legs: '#4A4038', shoes: '#2A1A14', rolled: true },
+  hoplite: { top: '#C99A3A', legs: '#E0B48A', shoes: '#6A4028', cuirass: true, cloak: '#A8282A', skirt: '#8E2A24', bareLegs: true },
+  chiton: { top: '#E9E2D2', legs: '#E0B48A', shoes: '#8A6A44', skirt: '#E9E2D2', bareLegs: true, belt: '#8A6A44' },
+  boyRag: { top: '#B8A88A', legs: '#E0B48A', shoes: '#E0B48A', skirt: '#B8A88A', bareLegs: true },
+  peplos: { top: '#E9DCC0', legs: '#E9DCC0', shoes: '#8A6A44', dress: true, belt2: '#A8282A' },
+  persian: { top: '#5A2A6A', legs: '#3A2A5A', shoes: '#C9A24A', long: true, dress: true, trim: '#E2B43C' },
+  immortal: { top: '#2E4A6A', legs: '#6A5A3A', shoes: '#C9A24A', scales: '#C9A24A', skirt: '#2E4A6A', trim: '#E2B43C' },
   duster: { top: '#8A6A44', legs: '#4A4038', shoes: '#3A2418', long: true, vestOpen: '#5A3E26' },
   cowboy: { top: '#C9B89A', legs: '#4A5A7A', shoes: '#5A3418', vestOpen: '#4A2E1E' },
   union: { top: '#2E3E6E', legs: '#4A5A8A', shoes: '#141010', buttons: '#E2B43C', belt: '#1E1612' },
@@ -193,6 +203,7 @@ export function body(o) {
   const pose = o.pose || 'stand';
   const [la, ra] = POSES[pose] || POSES.stand;
   const sitting = pose === 'sit' || o.sit;
+  const legLen0 = -hipY; if (of.cloak) s += `<path d="M${-shoulderW * 0.95} ${neckY + r * 0.2} Q${-shoulderW * 1.6} ${hipY} ${-shoulderW * 1.5} ${hipY + legLen0 * 0.55} L${shoulderW * 1.5} ${hipY + legLen0 * 0.55} Q${shoulderW * 1.6} ${hipY} ${shoulderW * 0.95} ${neckY + r * 0.2}Z" fill="${of.cloak}" ${OL()}/>`;
   // legs
   const legLen = -hipY;
   if (!of.dress || of.long) {
@@ -208,7 +219,7 @@ export function body(o) {
       const spread = pose === 'run' ? 26 : 4;
       for (const sx of [-1, 1]) {
         const x = sx * hipW * 0.42;
-        const L = limb(x, hipY, legLen - legW * 0.5, sx * spread, legW, of.shorts ? (of.socks || SKIN.olive) : of.legs);
+        const L = limb(x, hipY, legLen - legW * 0.5, sx * spread, legW, of.bareLegs ? o.skinColor : of.shorts ? (of.socks || SKIN.olive) : of.legs);
         s += L.s;
         if (of.shorts) s += `<path d="M${x - legW * 0.75} ${hipY - 4} L${x + legW * 0.75} ${hipY - 4} L${x + legW * 0.8} ${hipY + legLen * 0.38} L${x - legW * 0.8} ${hipY + legLen * 0.38}Z" fill="${of.legs}" ${OL(4)}/>`;
         if (of.stripes && o.outfit === 'pajamas') s += `<path d="M${x} ${hipY} L${L.x2} ${L.y2}" stroke="${of.stripes}" stroke-width="${legW * 0.18}" opacity=".7"/>`;
@@ -225,6 +236,7 @@ export function body(o) {
     s += `<path d="M${-hipW * 1.05} ${hipY - r * 0.3} L${-hipW * 1.5} ${-legW * 0.6} L${-hipW * 0.08} ${-legW * 0.6} L0 ${hipY + legLen * 0.2} L${hipW * 0.08} ${-legW * 0.6} L${hipW * 1.5} ${-legW * 0.6} L${hipW * 1.05} ${hipY - r * 0.3}Z" fill="${of.legs}" ${OL()}/><path d="M${-hipW * 0.6} ${hipY} L${-hipW * 0.8} ${-legW} M${hipW * 0.6} ${hipY} L${hipW * 0.8} ${-legW}" stroke="${shade(of.legs, -0.25)}" stroke-width="4"/>`;
   }
   if (o.swords) s += `<path d="M${-hipW * 1.2} ${hipY - r * 0.1} L${hipW * 2.2} ${hipY - r * 0.9}" stroke="${INK}" stroke-width="${r * 0.2}" stroke-linecap="round"/><path d="M${-hipW * 1.2} ${hipY - r * 0.1} L${hipW * 2.2} ${hipY - r * 0.9}" stroke="#2A1A14" stroke-width="${r * 0.12}" stroke-linecap="round"/><path d="M${-hipW * 1.0} ${hipY + r * 0.15} L${hipW * 1.6} ${hipY - r * 0.45}" stroke="${INK}" stroke-width="${r * 0.18}" stroke-linecap="round"/><path d="M${-hipW * 1.0} ${hipY + r * 0.15} L${hipW * 1.6} ${hipY - r * 0.45}" stroke="#3A2418" stroke-width="${r * 0.1}" stroke-linecap="round"/><rect x="${hipW * 1.5}" y="${hipY - r * 1.0}" width="${r * 0.16}" height="${r * 0.3}" fill="#C9A24A" transform="rotate(-20 ${hipW * 1.55} ${hipY - r * 0.85})"/>`;
+  if (of.skirt && !sitting) s += `<path d="M${-hipW * 1.05} ${hipY - r * 0.4} L${-hipW * 1.25} ${hipY + legLen * 0.42} L${hipW * 1.25} ${hipY + legLen * 0.42} L${hipW * 1.05} ${hipY - r * 0.4}Z" fill="${of.skirt}" ${OL()}/>` + (of.trim ? `<path d="M${-hipW * 1.25} ${hipY + legLen * 0.38} H${hipW * 1.25}" stroke="${of.trim}" stroke-width="${r * 0.12}"/>` : '');
   // torso
   const tTop = neckY, tBot = hipY + (of.long ? legLen * 0.55 : r * 0.15);
   const torso = `M${-shoulderW} ${tTop + r * 0.25} Q${-shoulderW} ${tTop} ${-shoulderW * 0.6} ${tTop} L${shoulderW * 0.6} ${tTop} Q${shoulderW} ${tTop} ${shoulderW} ${tTop + r * 0.25} L${hipW * (of.long ? 1.25 : 1)} ${tBot} L${-hipW * (of.long ? 1.25 : 1)} ${tBot}Z`;
@@ -242,6 +254,10 @@ export function body(o) {
     t += `<circle cx="${-shoulderW * 0.12}" cy="${tTop + r * 1.45}" r="${r * 0.06}" fill="${INK}"/><circle cx="${-shoulderW * 0.12}" cy="${tTop + r * 1.8}" r="${r * 0.06}" fill="${INK}"/>`;
     if (o.pocketSquare !== false) t += `<path d="M${shoulderW * 0.45} ${tTop + r * 0.75} l${r * 0.24} 0 l-${r * 0.06} ${r * 0.14} l-${r * 0.12} -${r * 0.08}Z" fill="#F7F2E6"/>`;
   }
+  if (of.cuirass) t += `<path d="M${-shoulderW * 0.55} ${tTop + r * 0.7} Q0 ${tTop + r * 1.0} ${shoulderW * 0.55} ${tTop + r * 0.7} M${-shoulderW * 0.3} ${tTop + r * 1.5} Q0 ${tTop + r * 1.7} ${shoulderW * 0.3} ${tTop + r * 1.5}" stroke="${shade(of.top, -0.35)}" stroke-width="5" fill="none"/>`;
+  if (of.scales) for (let yy = tTop + r * 0.3; yy < tBot; yy += r * 0.28) for (let xx = -shoulderW; xx < shoulderW; xx += r * 0.3) t += `<path d="M${xx} ${yy} q${r * 0.15} ${r * 0.25} ${r * 0.3} 0" stroke="${of.scales}" stroke-width="3" fill="none"/>`;
+  if (of.trim && of.dress) t += `<path d="M0 ${tTop} V${tBot}" stroke="${of.trim}" stroke-width="${r * 0.14}"/>`;
+  if (of.belt2) t += `<rect x="${-hipW}" y="${hipY - r * 0.7}" width="${hipW * 2}" height="${r * 0.16}" fill="${of.belt2}"/>`;
   if (of.kimono) {
     t += `<path d="M${-shoulderW * 0.55} ${tTop} L${shoulderW * 0.35} ${tTop + r * 1.6} L${shoulderW * 0.7} ${tTop + r * 1.6} L${-shoulderW * 0.2} ${tTop}Z" fill="${of.inner}" opacity=".95"/><path d="M${shoulderW * 0.55} ${tTop} L${-shoulderW * 0.1} ${tTop + r * 1.15}" stroke="${of.inner}" stroke-width="${r * 0.14}"/><path d="M${-shoulderW * 0.5} ${tTop} L${shoulderW * 0.4} ${tTop + r * 1.6}" stroke="${INK}" stroke-width="3"/>`;
     if (of.obi) t += `<rect x="${-hipW * 1.3}" y="${hipY - r * 0.55}" width="${hipW * 2.6}" height="${r * 0.42}" fill="${of.obi}" stroke="${INK}" stroke-width="3"/>`;
@@ -282,6 +298,7 @@ export function body(o) {
   if (o.ring) arms += `<circle cx="${hands[1][0] + 4}" cy="${hands[1][1] + 2}" r="${armW * 0.18}" fill="#CFE8FF" stroke="${INK}" stroke-width="2"/>`;
   if (o.cigar) { const [hx, hy] = hands[1]; arms += `<rect x="${hx - 6}" y="${hy - armW * 0.2}" width="${r * 0.55}" height="${r * 0.13}" rx="4" fill="#6A3E26" ${OL(3)}/><circle cx="${hx - 6 + r * 0.55}" cy="${hy - armW * 0.2 + r * 0.065}" r="${r * 0.06}" fill="#F08A3A"/>`; }
   if (o.holding) { const [hx, hy] = o.holdHand === 'left' ? hands[0] : hands[1]; arms += `<g transform="translate(${hx} ${hy})">${o.holding}</g>`; }
+  if (o.holdL) { const [hx, hy] = hands[0]; arms += `<g transform="translate(${hx} ${hy})">${o.holdL}</g>`; }
   const neck = `<rect x="${-r * 0.28}" y="${neckY - r * 0.3}" width="${r * 0.56}" height="${r * 0.5}" fill="${o.skinColor}" ${OL(4)}/>`;
   return { defs, s: s + neck + t + arms, neckY };
 }

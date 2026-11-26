@@ -144,7 +144,7 @@ def text_rgba(kind, text):
         d.rounded_rectangle([x - 22, y - 10, x + tw + 22, y + 62], 10, fill=(14, 10, 8, 175)); d.rectangle([x - 22, y - 10, x - 14, y + 62], fill=(214, 64, 52, 255))
         d.text((x, y - 4), text, font=f, fill=(250, 244, 232, 255))
     elif kind == 'big':
-        f = font('Anton.ttf', 150); tw = d.textlength(text, font=f); x, y = (W - tw) / 2, H / 2 - 110
+        f = font('Anton.ttf', 140); tw = d.textlength(text, font=f); x, y = (W - tw) / 2, H * 0.70 - 80
         for dx, dy in [(-7, 0), (7, 0), (0, -7), (0, 7), (-5, -5), (5, 5), (-5, 5), (5, -5)]: d.text((x + dx, y + dy), text, font=f, fill=(10, 8, 6, 255))
         d.text((x, y), text, font=f, fill=(255, 214, 90, 255))
     return np.array(im)

@@ -1,0 +1,11 @@
+import { char, put } from './chars.mjs';
+import { sparta, pass, army, G } from './greece.mjs';
+import { open, snap, close } from './snap.mjs';
+const txt = (x, y, t, size, fill, rot = 0) => `<g transform="rotate(${rot} ${x} ${y})"><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="none" stroke="#0A0604" stroke-width="${size * 0.16}" stroke-linejoin="round">${t}</text><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="${fill}">${t}</text></g>`;
+const LEO_H = { hair: 'long', hairColor: '#3A2A1E', beard: '#3A2A1E', outfit: 'hoplite', skin: 'olive', h: 490, hat: 'corinthian', hatColor: '#C99A3A' };
+let s = `<defs><clipPath id="L"><path d="M0 0 H900 L1020 1080 H0Z"/></clipPath><clipPath id="R"><path d="M900 0 H1920 V1080 H1020Z"/></clipPath><radialGradient id="g2" cx="0.6" cy="0.5" r="0.6"><stop offset="0" stop-color="#FF8A3A" stop-opacity=".6"/><stop offset="1" stop-color="#FF8A3A" stop-opacity="0"/></radialGradient></defs>`;
+s += `<g clip-path="url(#L)">${sparta({ mode: 'day' })}${put(char({ age: 'baby', expr: 'angry', skin: 'olive', blanket: '#A8282A', hair: 'tuft', h: 300 }), 450, 1060, 1.35)}</g>`;
+s += `<g clip-path="url(#R)">${pass({ mode: 'dusk', sun: [1700, 560] })}${army(900, 140, 7, '#3A2A4A', 0.7)}<rect width="1920" height="1080" fill="url(#g2)"/>${put(char({ ...LEO_H, expr: 'angry', holdL: `<g transform="translate(-30 -70)">${G.shield(105)}</g>`, holding: `<g transform="rotate(-5)">${G.spear(380)}</g>`, holdHand: 'right' }), 1440, 1530, 2.1)}</g>`;
+s += `<path d="M900 0 L1020 1080" stroke="#0A0604" stroke-width="22"/><path d="M900 0 L1020 1080" stroke="#F4E6C8" stroke-width="8"/>`;
+s += txt(450, 210, 'AGE 0', 190, '#FFFFFF', -3) + txt(1460, 195, '300 vs 100,000', 125, '#FFD23A', 2);
+await open(1280 / 1920); await snap(s, '/home/claude/lived/leonidas/out/thumbnail.png', '#000'); await close();
