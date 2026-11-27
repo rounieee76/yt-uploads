@@ -64,9 +64,9 @@ Sensitive, not yet: Stalin, JFK. Skip: living people (Ronaldo, Messi, Tyson, Gog
 13. People openly say "vibecoded / which AI?". The art has to look hand-made and consistent; don't claim "all original" if it isn't.
 
 ## 3. Our queue (real people, myths and legends; nobody owns them)
-Made (see livedit/schedule.json for publish slots): Genghis Khan · Al Capone · Miyamoto Musashi · Jesse James · King Leonidas
+Made (see livedit/schedule.json for publish slots): Genghis Khan · Al Capone · Miyamoto Musashi · Jesse James · King Leonidas · Blackbeard
 Next, in order, re-ranked by demand 2026-11-27 (claim in livedit/schedule.json before starting):
-1. **Blackbeard**, for Jack Sparrow fans (claimed by run B, status rendering, slot Nov 29 00:00 UTC)
+1. ~~**Blackbeard**~~ MADE (b82eWqPWf4Y, publishes Nov 29 00:00 UTC)
 2. **Hassan-i Sabbah**, the real Assassins (Agent 47 ~103 likes today + Ezio/Altaïr fans)
 3. **Lucky Luciano**, mob part 2 (Vito 70 + Niko + Michael fans; Capone kit exists)
 4. **Eliot Ness**, the lawman who chased Capone (closest real answer to the #1 ask, Leon ~184; Capone kit)

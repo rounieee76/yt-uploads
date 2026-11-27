@@ -1,0 +1,12 @@
+import { char, put } from './chars.mjs';
+import { room } from './bgs.mjs';
+import { ship, deck, X } from './pirates.mjs';
+import { open, snap, close } from './snap.mjs';
+const txt = (x, y, t, size, fill, rot = 0) => `<g transform="rotate(${rot} ${x} ${y})"><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="none" stroke="#0A0604" stroke-width="${size * 0.16}" stroke-linejoin="round">${t}</text><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="${fill}">${t}</text></g>`;
+const BB = { hair: 'long', hairColor: '#141012', hat: 'tricorn', hatColor: '#1A1416', hatTrim: '#C9A24A', outfit: 'pirate', skin: 'olive', beard: '#141012', beardLong: true, braids: true, pistols: true, fuses: true, h: 500 };
+let s = `<defs><clipPath id="L"><path d="M0 0 H860 L980 1080 H0Z"/></clipPath><clipPath id="R"><path d="M860 0 H1920 V1080 H980Z"/></clipPath><radialGradient id="g2" cx="0.75" cy="0.45" r="0.6"><stop offset="0" stop-color="#FF5A2A" stop-opacity=".75"/><stop offset="1" stop-color="#FF5A2A" stop-opacity="0"/></radialGradient></defs>`;
+s += `<g clip-path="url(#L)">${room({ wall: '#C8A878', pattern: 'stripes', floor: '#6A4A30', windows: [{ x: 420, y: 330, w: 340, h: 380, mode: 'day', view: 'yard' }] })}${ship(590, 600, 0.13, { sails: 'furled' })}${put(char({ age: 'baby', expr: 'angry', skin: 'olive', blanket: '#C9B89A', h: 300 }), 400, 1000, 1.45)}</g>`;
+s += `<g clip-path="url(#R)">${deck({ mode: 'dusk', sun: [1500, 520], enemy: ship(1650, 600, 0.2, { flip: true, flag: '#F3EEE2', firing: true }) })}<rect width="1920" height="1080" fill="url(#g2)"/>${X.smoke(1750, 420, 1.3, '#8A7A70')}${put(char({ ...BB, expr: 'shout', pose: 'point', holding: X.cutlass(-40, 1), holdHand: 'right' }), 1400, 1560, 2.15)}</g>`;
+s += `<path d="M860 0 L980 1080" stroke="#0A0604" stroke-width="22"/><path d="M860 0 L980 1080" stroke="#F4E6C8" stroke-width="8"/>`;
+s += txt(420, 210, 'AGE 0', 190, '#FFFFFF', -3) + txt(1420, 200, 'NO QUARTER', 160, '#E8302A', 2);
+await open(1280 / 1920); await snap(s, process.argv[2] || '/home/claude/lived/blackbeard/out/thumbnail.png', '#000'); await close();

@@ -3,7 +3,7 @@
     "08:00",
     "19:00"
   ],
-  "note": "Two videos a day at 8:00 AM and 7:00 PM US Eastern. publishAt in UTC (EST = UTC-5 until Mar 8 2027, then EDT = UTC-4). A subject is claimed by adding it here BEFORE work starts (status: claimed) so two runs never make the same video.",
+  "note": "Two videos a day at 8:00 AM and 7:00 PM US Eastern. publishAt in UTC (EST = UTC-5 until Mar 14 2027, then EDT = UTC-4). A subject is claimed by adding it here BEFORE work starts (status: claimed) so two runs never make the same video.",
   "videos": [
     {
       "subject": "Genghis Khan",
@@ -49,11 +49,12 @@
     {
       "subject": "Blackbeard",
       "slug": "blackbeard",
-      "video_id": null,
+      "video_id": "b82eWqPWf4Y",
       "publish_at": "2026-11-29T00:00:00Z",
-      "status": "rendering",
+      "status": "scheduled",
       "claimed_at": "2026-11-27T07:50:00Z",
-      "run": "A"
+      "run": "A",
+      "thumb": "inhouse"
     }
   ]
 }
