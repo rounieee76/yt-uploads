@@ -1,0 +1,11 @@
+import { char, put } from './chars.mjs';
+import { iwanRoom, alamut, Q } from './persia.mjs';
+import { open, snap, close } from './snap.mjs';
+const txt = (x, y, t, size, fill, rot = 0) => `<g transform="rotate(${rot} ${x} ${y})"><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="none" stroke="#0A0604" stroke-width="${size * 0.16}" stroke-linejoin="round">${t}</text><text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="${fill}">${t}</text></g>`;
+const HS = { hair: 'short', hairColor: '#1A1416', hat: 'turban', hatColor: '#1E1E26', turbanTail: true, outfit: 'scholar', skin: 'olive', beard: '#1A1416', beardLong: true, h: 480 };
+let s = `<defs><clipPath id="L"><path d="M0 0 H860 L980 1080 H0Z"/></clipPath><clipPath id="R"><path d="M860 0 H1920 V1080 H980Z"/></clipPath><radialGradient id="g2" cx="0.72" cy="0.5" r="0.6"><stop offset="0" stop-color="#FF5A2A" stop-opacity=".55"/><stop offset="1" stop-color="#FF5A2A" stop-opacity="0"/></radialGradient></defs>`;
+s += `<g clip-path="url(#L)">${iwanRoom({ window: 540, mode: 'day' })}<rect x="140" y="930" width="560" height="60" rx="26" fill="#8E2A24" stroke="#24170F" stroke-width="6"/>${put(char({ age: 'baby', expr: 'angry', skin: 'olive', blanket: '#C9B89A', h: 300 }), 420, 960, 1.45)}</g>`;
+s += `<g clip-path="url(#R)">${alamut({ mode: 'dusk', sun: [1750, 470], x: 1500, horizon: 760 })}<rect width="1920" height="1080" fill="url(#g2)"/>${put(char({ ...HS, expr: 'angry', pose: 'fist', holding: `<g transform="scale(1.4)">${Q.dagger(-20)}</g>`, holdHand: 'right' }), 1330, 1560, 2.15)}</g>`;
+s += `<path d="M860 0 L980 1080" stroke="#0A0604" stroke-width="22"/><path d="M860 0 L980 1080" stroke="#F4E6C8" stroke-width="8"/>`;
+s += txt(420, 210, 'AGE 0', 190, '#FFFFFF', -3) + txt(1430, 200, 'MASTER OF ASSASSINS', 102, '#E8302A', 2);
+await open(1280 / 1920); await snap(s, process.argv[2] || '/home/claude/lived/hassan/out/thumbnail.png', '#000'); await close();
