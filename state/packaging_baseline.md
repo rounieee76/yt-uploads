@@ -15,3 +15,10 @@
   Dealerships CTR 2.2% = packaging problem. Car wash comeuppance CTR 4.3% = reach problem (topic repeat of the hit for the same viewers).
 - Light-gray minimal thumbnails: 2.2% and 4.3% on tiny samples. Dark/saturated photo + question thumbnails: 3.9% and 4.3% on large samples.
   Until a light-gray one beats 4% on 1,000+ impressions, default to the hit's style: photo scene, high contrast, a 2-4 word question or claim.
+
+# Lived It (new format, since Nov 26 2026) — measurements
+Old Money Encode videos above are private on purpose; their experiments (exp-001..004) can no longer be judged on public reach.
+| date (UTC) | video | age | views | likes | comments | impressions / CTR | note |
+|---|---|---|---|---|---|---|---|
+| 2026-11-27 07:45 | Genghis Khan (amLt4aU1bYo) | 15 h | 6 | 1 | 0 | n/a (no Studio browser this run) | Analytics API empty (≈2-day lag) |
+| 2026-11-27 07:45 | Al Capone (Go3wvmMfxZQ) | 8 h | 3 | 0 | 0 | n/a | too new |

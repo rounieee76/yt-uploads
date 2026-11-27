@@ -14,3 +14,4 @@
 - DESCRIPTION: flash-forward paragraph in 2nd person; one line listing story beats; question + "Who should be born
   next? Tell me in the comments."; chapters; sources; "All illustrations, animation and music are original."
 - TAGS: name, name + backstory/story/life, era terms, key people, "what if you were born as".
+- WHAT WINS (packaging tests on Lived It videos): none judged yet — first videos went public Nov 26–27; earliest allowed change is 48 h after publish (Genghis ≥ Nov 28 16:30 UTC).

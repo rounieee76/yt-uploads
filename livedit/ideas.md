@@ -1,10 +1,26 @@
-# Lived It: video ideas from Born in Lore comments (updated 2026-11-26)
+# Lived It: video ideas from Born in Lore comments (updated 2026-11-27)
 Source: **every video** on Born in Lore (UCBV6H_ZzQHW8O1h7NoiaW_w). That covers 9 long videos and 1 Short:
 Witcher, the Short, Ezio, Arthur Morgan, Kratos, Master Chief, CJ, Ghost, John Marston and Tommy Vercetti.
 For each long video we read the 100 most-liked and the 100 newest comments, about 1,900 comments in total.
 For the Witcher and the Short that was every comment.
 The raw tally is in `research/born_in_lore_comment_tally.tsv` and per-video notes are in `research/born_in_lore_feedback.md`.
 Coverage limit: the YouTube API (through Zapier) hides page tokens, so older comments with few likes past the first 200 on big videos are not reachable.
+
+## 0. Born in Lore watch (daily snapshot)
+| date | subs | newest upload | views of newest 3 | notes |
+|---|---|---|---|---|
+| 2026-11-27 | 52.1K, 10 videos, 11.41M total views | Tommy Vercetti (Nov 22) — no new upload in 5 days | Tommy 430K · Marston 344K · Ghost Short 22K | Ghost 4.93M, CJ 2.12M, Kratos 1.38M, Master Chief 1.25M, Arthur 546K, Ezio 494K, Witcher 45K. Title pattern unchanged ("What If You Were Born as X? \| Game"). |
+
+### 2026-11-27 comment read (top 100 by relevance: Tommy, Marston, Ghost Short; likes summed)
+Leon S. Kennedy ~184 · Trevor ~111 · Agent 47 ~103 · Jin Sakai ~75 · Vito Scaletta 70 · Claude (GTA III) 47 · Michael De Santa 45 ·
+Captain Price 39 · Niko ~28 · Franklin 26 · Dante (DMC) ~22 · Naked Snake 21 · Lincoln Clay (Mafia III) 14 · "Agente 007" 8 · Jack Krauser 7.
+New asks this read: Lincoln Clay (14) → real: a Vietnam vet turned crime boss is thin; skip. "Agent 007" (8) → **Sidney Reilly** / Dušan Popov (real spies behind Bond).
+Leon (no real twin) → closest real: a lone young lawman against a monster city → **Eliot Ness** (Capone kit exists, pairs with our Capone video).
+Captain Price → **Paddy Mayne** (SAS co-founder, WWII). Michael De Santa → **John Dillinger**. Stalin asked again (2) — still sensitive, not yet.
+Praise: "strong thematic callbacks" (Tommy printing-press callback again), "did not expect to get emotional", "art style is so clean".
+Complaints: "'All illustrations… are original.' buddy this is vibecoded" (Marston) and many "which AI / how do you make this" — only write "original" in
+our description if it is true; say "Illustrated and animated for this channel" otherwise. A Spanish viewer still misses the old narrator.
+Our own videos (Genghis, Capone): 0 comments so far, no "who next" requests yet.
 
 ## 1. What viewers ask for, across all 10 videos (comments / likes / how many videos)
 | # | request | asks | likes | videos | our real-life answer |
@@ -49,18 +65,22 @@ Sensitive, not yet: Stalin, JFK. Skip: living people (Ronaldo, Messi, Tyson, Gog
 
 ## 3. Our queue (real people, myths and legends; nobody owns them)
 Made (see livedit/schedule.json for publish slots): Genghis Khan · Al Capone · Miyamoto Musashi · Jesse James · King Leonidas
-Next, in order (claim in livedit/schedule.json before starting):
-1. **Blackbeard**, for Jack Sparrow fans (pirate kit needed: ship deck, sea battle, Caribbean town)
-2. **Hercules**, myth (Greek kit exists)
-3. **Napoleon**, asked directly
-4. **Sun Wukong**, asked 3 times (myth)
-5. **Billy the Kid**, Wild West part 2 (west kit exists)
-6. **Spartacus**, gladiator (Rome kit needed)
-7. **Hassan-i Sabbah**, the real Assassins (for Agent 47 / Ezio / Altaïr fans)
-8. **Vlad the Impaler**, the real Dracula
-9. **Lucky Luciano**, mob part 2 (Capone kit exists)
-10. **Achilles**, myth (Greek kit)
-11. **Khalid ibn al-Walid**, asked directly
-12. **Jan Žižka**, the one-eyed general (for Kingdom Come fans)
-13. **Doc Holliday**, Wild West part 3
-14. **Zeus** / **Hades**, myths (Greek kit)
+Next, in order, re-ranked by demand 2026-11-27 (claim in livedit/schedule.json before starting):
+1. **Blackbeard**, for Jack Sparrow fans (claimed by run B, status rendering, slot Nov 29 00:00 UTC)
+2. **Hassan-i Sabbah**, the real Assassins (Agent 47 ~103 likes today + Ezio/Altaïr fans)
+3. **Lucky Luciano**, mob part 2 (Vito 70 + Niko + Michael fans; Capone kit exists)
+4. **Eliot Ness**, the lawman who chased Capone (closest real answer to the #1 ask, Leon ~184; Capone kit)
+5. **John Dillinger**, the bank robber (Michael De Santa 45)
+6. **Napoleon**, asked directly
+7. **Hercules**, myth (Greek kit exists)
+8. **Sun Wukong**, asked 3 times (myth)
+9. **Billy the Kid**, Wild West part 2 (west kit exists)
+10. **Paddy Mayne**, SAS founder WWII (Captain Price 39 / Ghost / Soap fans)
+11. **Spartacus**, gladiator (Rome kit needed)
+12. **Vlad the Impaler**, the real Dracula
+13. **Sidney Reilly**, "Ace of Spies" (007 / Naked Snake fans)
+14. **Achilles**, myth (Greek kit)
+15. **Khalid ibn al-Walid**, asked directly
+16. **Jan Žižka**, the one-eyed general (for Kingdom Come fans)
+17. **Doc Holliday**, Wild West part 3
+18. **Zeus** / **Hades**, myths (Greek kit)
