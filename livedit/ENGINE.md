@@ -1,6 +1,7 @@
 # Lived It — how one video is made (in-house engine, no paid image credits)
 
-Free pipeline. ElevenLabs/Higgsfield/ChatGPT image credits are NOT used (owner's choice, Nov 26 2026).
+Free pipeline. ElevenLabs/Higgsfield credits are NOT used. Video visuals = in-house engine.
+THUMBNAILS = ChatGPT (owner's choice, Nov 27 2026) in the owner's "Rounit Main" Chrome profile — see step 8.
 Worked examples: `livedit/videos/capone`, `musashi`, `jesse`.
 
 ## 0. Setup (fresh workspace)
@@ -55,11 +56,29 @@ Do not run the voice model while rendering (CPU contention halves speed).
 Tracks from /home/claude/dl/free-music/mp3 (CC BY 4.0, Tanner Helland) — credit in the description.
 
 ## 7. Final file (< 95 MB for staging)
-`ffmpeg -i work/video_silent.mp4 -i work/mix2.wav -map 0:v -map 1:a -c:v libx264 -preset medium -crf 24 -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart -shortest out/final.mp4`
-(raise crf by 1 until < 95 MB). Check: duration = voice, frames at 10/30/50/70/90%, loudness −14.
+Film grain defeats CRF (a CRF file came out 398 MB), so use a capped bitrate, in the background:
+`nohup ffmpeg -y -i work/video_silent.mp4 -i work/mix2.wav -map 0:v -map 1:a -vf hqdn3d=3:3:8:8 -c:v libx264 -preset veryfast -b:v 1300k -maxrate 1900k -bufsize 3800k -c:a aac -b:a 128k -shortest -movflags +faststart out/final.tmp.mp4 && mv out/final.tmp.mp4 out/final.mp4 &`
+(lower -b:v if > 95 MB). Check: duration = voice, frames at 10/30/50/70/90%, loudness −14.
 
-## 8. Thumbnail
-Split "AGE 0" (baby, warm) | adult at the most dramatic moment + 1–2 word claim in yellow (see `engine/thumb_*.mjs`).
+## 8. Thumbnail — made with ChatGPT (owner's request, Nov 27 2026)
+Browser: Claude in Chrome, deviceId **ea97dc27-10ac-40c3-a84d-cdf229087593** (owner's "Rounit Main" profile; was listed as
+"Browser 1"). `list_connected_browsers` → `select_browser` with that id. Do NOT use f12d6f9c-… (other profile, its free
+image quota is usually used up). Never type a password; if ChatGPT is logged out or says "not enough usage … after <time>",
+fall back to the in-house thumbnail (`engine/thumb_*.mjs`) and set `"thumb":"inhouse"` in schedule.json so it gets
+replaced later.
+1. New chat at chatgpt.com, prompt (fill the brackets; the claim is 1–3 true words):
+   `Create an image: a wide 16:9 landscape YouTube thumbnail in bold cartoon illustration style with thick black outlines,
+   saturated colors and high contrast (style of a "What if you were born as" history channel). Split vertically into two
+   halves with a dark slightly diagonal divider. LEFT half: a cute grumpy chubby baby wrapped in [cloth] inside [birthplace
+   and era] with warm light; top-left a parchment sign with heavy black letters "AGE 0". RIGHT half: adult [name, look,
+   clothes, weapon/prop, expression], background of [most dramatic moment/place]; at the top, huge bold red letters with a
+   thick black outline: "[CLAIM]". No other text.`
+2. Wait ~50 s. Get it out at full size: run JS that overlays the newest large `main img` full-height
+   (`position:fixed;inset:0;z-index:2147483647;background:#000` + `<img style="height:100vh;width:auto">`), then two
+   `computer` **zoom** actions (no `scale`) on the left and right halves of the image area (x 0→W/2 and W/2→W, where
+   W = viewport height × 16/9 in the screenshot coordinate frame). Each zoom is saved as a PNG under
+   /tmp/claude-tool-results/…; stitch: `python3 engine/gpt_stitch.py left.png right.png out/thumbnail.jpg` (→ 1280×720).
+3. Look at it: every word spelled right, faces fine, nothing cut off. One retry with a corrected prompt if not.
 
 ## 9. Title / description
 Title: `What If You Were Born as <Name>? | <World>` (A/B later with `Live <Name>'s Entire Life in <N> Minutes`).
