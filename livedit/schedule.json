@@ -59,9 +59,12 @@
     {
       "subject": "Hassan-i Sabbah",
       "slug": "hassan",
-      "status": "rendering",
+      "status": "scheduled",
       "claimed_at": "2026-11-27T19:48:23Z",
-      "run": "B"
+      "run": "B",
+      "video_id": "1QYvNEo2sSE",
+      "publish_at": "2026-11-29T13:00:00Z",
+      "thumb": "inhouse"
     }
   ]
 }
