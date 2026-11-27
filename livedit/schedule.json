@@ -55,6 +55,13 @@
       "claimed_at": "2026-11-27T07:50:00Z",
       "run": "A",
       "thumb": "inhouse"
+    },
+    {
+      "subject": "Hassan-i Sabbah",
+      "slug": "hassan",
+      "status": "claimed",
+      "claimed_at": "2026-11-27T19:48:23Z",
+      "run": "B"
     }
   ]
 }
