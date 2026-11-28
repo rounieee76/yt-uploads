@@ -69,9 +69,12 @@
     {
       "subject": "Lucky Luciano",
       "slug": "luciano",
-      "status": "rendering",
+      "status": "scheduled",
       "claimed_at": "2026-11-28T07:48:00Z",
-      "run": "A"
+      "run": "A",
+      "video_id": "Emj62IQzUAQ",
+      "publish_at": "2026-11-30T00:00:00Z",
+      "thumb": "inhouse"
     }
   ]
 }

@@ -76,11 +76,11 @@ Sensitive, not yet: Stalin, JFK. Skip: living people (Ronaldo, Messi, Tyson, Gog
 13. People openly say "vibecoded / which AI?". The art has to look hand-made and consistent; don't claim "all original" if it isn't.
 
 ## 3. Our queue (real people, myths and legends; nobody owns them)
-Made (see livedit/schedule.json for publish slots): Genghis Khan · Al Capone · Miyamoto Musashi · Jesse James · King Leonidas · Blackbeard · Hassan-i Sabbah
+Made (see livedit/schedule.json for publish slots): Genghis Khan · Al Capone · Miyamoto Musashi · Jesse James · King Leonidas · Blackbeard · Hassan-i Sabbah · Lucky Luciano
 Next, in order, re-ranked by demand 2026-11-28 (claim in livedit/schedule.json before starting):
 1. ~~**Blackbeard**~~ MADE (b82eWqPWf4Y, publishes Nov 29 00:00 UTC)
 2. ~~**Hassan-i Sabbah**~~ MADE (1QYvNEo2sSE, publishes Nov 29 13:00 UTC)
-3. **Lucky Luciano**, mob part 2 (Niko ~78 + Vito 65 this read, the biggest combined ask; Capone kit exists)
+3. ~~**Lucky Luciano**~~ MADE (Emj62IQzUAQ, publishes Nov 30 00:00 UTC; new mob.mjs kit)
 4. **John Dillinger**, the bank robber (Michael De Santa ~73 this read, up from 45; moved above Ness)
 5. **Eliot Ness**, the lawman who chased Capone (closest real answer to Leon, ~52 this read; Capone kit)
 6. **Napoleon**, asked directly
