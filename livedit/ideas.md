@@ -1,4 +1,4 @@
-# Lived It: video ideas from Born in Lore comments (updated 2026-11-27)
+# Lived It: video ideas from Born in Lore comments (updated 2026-11-28)
 Source: **every video** on Born in Lore (UCBV6H_ZzQHW8O1h7NoiaW_w). That covers 9 long videos and 1 Short:
 Witcher, the Short, Ezio, Arthur Morgan, Kratos, Master Chief, CJ, Ghost, John Marston and Tommy Vercetti.
 For each long video we read the 100 most-liked and the 100 newest comments, about 1,900 comments in total.
@@ -9,7 +9,19 @@ Coverage limit: the YouTube API (through Zapier) hides page tokens, so older com
 ## 0. Born in Lore watch (daily snapshot)
 | date | subs | newest upload | views of newest 3 | notes |
 |---|---|---|---|---|
+| 2026-11-28 | 55.3K, 12 videos, 12.12M total views | **Doom Slayer (Nov 27 12:30 UTC)** + its 49 s Short (Nov 27 13:00) | Doom 131K in ~19 h · Doom Short 2.6K · Tommy 468K | NEW TITLE PATTERN on Doom: "Live the Doom Slayer's Entire Life in 10 Minutes" (no "What If You Were Born as", no "\| Game"). **NEW ART STYLE** (more 3D-looking): his pinned comment says "hundreds of copycat channels have been ripping off our stuff" so he moved away from the flat 2D look. First Short that links the full video in the description. Description now pitches channel memberships. Ghost 5.26M, CJ 2.21M, Kratos ?, Master Chief 1.30M, Arthur 569K, Ezio 516K, Marston 373K. |
 | 2026-11-27 | 52.1K, 10 videos, 11.41M total views | Tommy Vercetti (Nov 22) — no new upload in 5 days | Tommy 430K · Marston 344K · Ghost Short 22K | Ghost 4.93M, CJ 2.12M, Kratos 1.38M, Master Chief 1.25M, Arthur 546K, Ezio 494K, Witcher 45K. Title pattern unchanged ("What If You Were Born as X? \| Game"). |
+
+### 2026-11-28 comment read (top 100 by relevance: Doom Slayer, Doom Short, Tommy; likes summed)
+Trevor ~122 · Niko Bellic ~78 · Michael De Santa ~73 · Vito Scaletta 65 · Leon ~52 · Claude (GTA III) ~51 · Jin Sakai ~49 · Agent 47 ~34 ·
+Captain Price ~12 · Franklin 9 · Shadow (Shadow Fight) 6 · Gordon Freeman 5 · Dexter 4 · Aiden Pearce 4 · Max Payne 3 · Dante 3 · Stalin 2 · Henry of Skalitz 1.
+New this read: Gordon Freeman, Dexter, Max Payne, Kazuma Kiryu, Marcus Fenix, John Wick, Tony Montana (all IP, no real twin we would use). Doom Slayer was asked again on Tommy (now made by him).
+Can we make it? Trevor → no (IP); real: Al Capone (made). Niko / Vito → no; real: **Lucky Luciano**. Michael → no; real: **John Dillinger**. Leon → no; real: **Eliot Ness**.
+Jin Sakai → no; real: Miyamoto Musashi (made) and **Sō Sukekuni**, the real lord who died defending Tsushima from the Mongols in 1274 (pairs with our Genghis video; sources thin, check before claiming).
+Praise: "animation level up", "holy animation upgrade", the rabbit callback (toy rabbit 01:50 → therapy rabbit 02:22 → painting 08:44) quoted with timestamps again — plant-and-pay-off keeps winning. Persian and Turkish viewers thank him for the dubbed audio.
+Complaints: a few "the old style is better" / "pls come back with the old animation"; a Portuguese viewer says he left out the Slayer's family on Earth (accuracy is checked).
+**Watch-out for us:** he publicly calls flat-2D look-alikes "copycat channels ripping off our stuff". Our titles ("What If You Were Born as…") and split AGE 0 thumbnails are his old pattern. Keep our art clearly our own (palette, line style, watermark) and our subjects real people only.
+Our own videos (Genghis, Capone, Musashi, Jesse James): 0 comments, no "who next" requests yet.
 
 ### 2026-11-27 comment read (top 100 by relevance: Tommy, Marston, Ghost Short; likes summed)
 Leon S. Kennedy ~184 · Trevor ~111 · Agent 47 ~103 · Jin Sakai ~75 · Vito Scaletta 70 · Claude (GTA III) 47 · Michael De Santa 45 ·
@@ -65,13 +77,14 @@ Sensitive, not yet: Stalin, JFK. Skip: living people (Ronaldo, Messi, Tyson, Gog
 
 ## 3. Our queue (real people, myths and legends; nobody owns them)
 Made (see livedit/schedule.json for publish slots): Genghis Khan · Al Capone · Miyamoto Musashi · Jesse James · King Leonidas · Blackbeard · Hassan-i Sabbah
-Next, in order, re-ranked by demand 2026-11-27 (claim in livedit/schedule.json before starting):
+Next, in order, re-ranked by demand 2026-11-28 (claim in livedit/schedule.json before starting):
 1. ~~**Blackbeard**~~ MADE (b82eWqPWf4Y, publishes Nov 29 00:00 UTC)
 2. ~~**Hassan-i Sabbah**~~ MADE (1QYvNEo2sSE, publishes Nov 29 13:00 UTC)
-3. **Lucky Luciano**, mob part 2 (Vito 70 + Niko + Michael fans; Capone kit exists)
-4. **Eliot Ness**, the lawman who chased Capone (closest real answer to the #1 ask, Leon ~184; Capone kit)
-5. **John Dillinger**, the bank robber (Michael De Santa 45)
+3. **Lucky Luciano**, mob part 2 (Niko ~78 + Vito 65 this read, the biggest combined ask; Capone kit exists)
+4. **John Dillinger**, the bank robber (Michael De Santa ~73 this read, up from 45; moved above Ness)
+5. **Eliot Ness**, the lawman who chased Capone (closest real answer to Leon, ~52 this read; Capone kit)
 6. **Napoleon**, asked directly
+6b. **Sō Sukekuni**, the real samurai of Tsushima 1274 (Jin Sakai ~49 this read, 342 likes all-time; Mongol series with Genghis; check sources first)
 7. **Hercules**, myth (Greek kit exists)
 8. **Sun Wukong**, asked 3 times (myth)
 9. **Billy the Kid**, Wild West part 2 (west kit exists)

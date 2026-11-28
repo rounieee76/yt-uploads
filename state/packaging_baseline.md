@@ -22,3 +22,8 @@ Old Money Encode videos above are private on purpose; their experiments (exp-001
 |---|---|---|---|---|---|---|---|
 | 2026-11-27 07:45 | Genghis Khan (amLt4aU1bYo) | 15 h | 6 | 1 | 0 | n/a (no Studio browser this run) | Analytics API empty (≈2-day lag) |
 | 2026-11-27 07:45 | Al Capone (Go3wvmMfxZQ) | 8 h | 3 | 0 | 0 | n/a | too new |
+| 2026-11-28 07:45 | Genghis Khan (amLt4aU1bYo) | 39 h | 21 | 2 | 0 | n/a (no browser this run) | Analytics API still empty; 48 h mark = Nov 28 16:28 UTC, no change allowed yet |
+| 2026-11-28 07:45 | Al Capone (Go3wvmMfxZQ) | 32 h | 10 | 0 | 0 | n/a | too new |
+| 2026-11-28 07:45 | Miyamoto Musashi (EfuDs5yDhh8) | 19 h | 1 | 0 | 0 | n/a | too new |
+| 2026-11-28 07:45 | Jesse James (waDoCElmsSE) | 8 h | 0 | 0 | 0 | n/a | too new |
+Channel 2026-11-28: 20 subscribers, 6 public videos. Leonidas goes public Nov 28 13:00 UTC, Blackbeard Nov 29 00:00, Hassan-i Sabbah Nov 29 13:00.
