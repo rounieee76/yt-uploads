@@ -65,6 +65,13 @@
       "video_id": "1QYvNEo2sSE",
       "publish_at": "2026-11-29T13:00:00Z",
       "thumb": "inhouse"
+    },
+    {
+      "subject": "Lucky Luciano",
+      "slug": "luciano",
+      "status": "claimed",
+      "claimed_at": "2026-11-28T07:48:00Z",
+      "run": "A"
     }
   ]
 }
